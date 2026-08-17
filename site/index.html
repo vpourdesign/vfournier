@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanessa Fournier inc. — Courtier immobilier commercial &amp; résidentiel | VF Immobilier</title>
+<meta name="description" content="Vanessa Fournier, courtier immobilier chez Royal LePage Urbain. Commercial, industriel et résidentiel dans le Grand Montréal. Investir. Acheter. Vendre. Avec stratégie.">
+<link rel="canonical" href="https://vfimmobilier.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:title" content="Vanessa Fournier inc. — Courtier immobilier commercial &amp; résidentiel">
+<meta property="og:description" content="Commercial, industriel et résidentiel. Investir. Acheter. Vendre. Avec stratégie.">
+<meta property="og:url" content="https://vfimmobilier.com/">
+<meta property="og:image" content="https://vfimmobilier.com/assets/og-vf-immobilier.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<style>
+/* ============================================================
+   VF IMMOBILIER — build from DESIGN.md v1.0
+   ============================================================ */
+@font-face{font-family:'Playfair Display';src:url('assets/fonts/playfair-display-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Playfair Display';src:url('assets/fonts/playfair-display-latin-ext-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Jost';src:url('assets/fonts/jost-latin-300-normal.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Jost';src:url('assets/fonts/jost-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Jost';src:url('assets/fonts/jost-latin-ext-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Jost';src:url('assets/fonts/jost-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('assets/fonts/inter-latin-300-normal.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('assets/fonts/inter-latin-ext-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+
+/* ---------- tokens (DESIGN.md) ---------- */
+:root{
+  --canvas:#F7F3EE; --surface-1:#FFFFFF; --surface-2:#F0EBE4;
+  --ink:#4D4D4D; --ink-strong:#1A1A1A; --ink-muted:#6E6862;
+  --accent:#A59D95; --accent-deep:#8A8078;
+  --hairline:#DCD5CC; --hairline-strong:#C4BBB0;
+  --inverse-canvas:#F7F3EE; --inverse-ink:#1A1A1A; /* jamais surchargés par le thème */
+
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-label:'Jost','Futura',system-ui,sans-serif;
+  --ff-body:'Inter','Helvetica Neue',system-ui,sans-serif;
+
+  --gutter:clamp(24px,5vw,80px);
+  --section-y:clamp(88px,11vw,176px);
+  --max:1280px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+[data-theme="dark"]{
+  --canvas:#000000; --surface-1:#141210; --surface-2:#0B0A09;
+  --ink:#FFFFFF; --ink-strong:#FFFFFF; --ink-muted:#CFC8C0;
+  --accent:#A59D95; --accent-deep:#A59D95;
+  --hairline:#2E2A26; --hairline-strong:#3A352F;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--canvas); color:var(--ink);
+  font-family:var(--ff-body); font-weight:300; font-size:17px; line-height:1.7;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink-strong); outline-offset:3px}
+
+.wrap{max-width:var(--max); margin-inline:auto; padding-inline:var(--gutter)}
+section{padding-block:var(--section-y)}
+.measure{max-width:62ch}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:var(--ff-display); font-weight:400; margin:0; color:var(--ink-strong)}
+h2{font-size:clamp(32px,4vw,56px); line-height:1.12; letter-spacing:-.01em}
+h3{font-size:clamp(21px,2.1vw,27px); line-height:1.25}
+p{margin:0 0 1.1em}
+p:last-child{margin-bottom:0}
+
+.eyebrow{
+  display:flex; align-items:center; gap:16px;
+  font-family:var(--ff-label); font-size:12px; font-weight:400;
+  text-transform:uppercase; letter-spacing:.28em; color:var(--accent-deep);
+  margin:0 0 28px;
+}
+.eyebrow::before{content:""; width:48px; height:1px; background:var(--accent); flex:none}
+
+.lede{font-size:19px; line-height:1.65; color:var(--ink-muted)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:12px;
+  min-height:52px; padding:16px 38px; border:1px solid transparent;
+  font-family:var(--ff-label); font-size:12.5px; font-weight:400;
+  text-transform:uppercase; letter-spacing:.2em; text-decoration:none;
+  cursor:pointer; transition:background .28s var(--ease),color .28s var(--ease),border-color .28s var(--ease);
+}
+.btn--primary{background:var(--ink-strong); color:var(--canvas)}
+.btn--primary:hover{background:var(--accent-deep)}
+.btn--ghost{border-color:var(--ink); color:var(--ink)}
+.btn--ghost:hover{background:var(--ink-strong); border-color:var(--ink-strong); color:var(--canvas)}
+.btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:40px}
+
+/* ---------- header ---------- */
+.site-head{
+  position:fixed; inset:0 0 auto 0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+  padding:18px var(--gutter);
+  background:color-mix(in srgb,var(--canvas) 88%,transparent);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .4s var(--ease),padding .4s var(--ease);
+}
+.site-head.is-stuck{border-bottom-color:var(--hairline); padding-block:12px}
+.site-head__logo{display:block; width:132px; color:var(--ink)}
+.site-head__logo svg{width:100%; height:auto; display:block}
+.nav{display:flex; align-items:center; gap:34px}
+.nav a{
+  font-family:var(--ff-label); font-size:11.5px; text-transform:uppercase;
+  letter-spacing:.22em; text-decoration:none; color:var(--ink); position:relative; padding-block:6px;
+}
+.nav a::after{content:""; position:absolute; left:0; right:100%; bottom:0; height:1px; background:var(--accent); transition:right .4s var(--ease)}
+.nav a:hover::after{right:0}
+.nav .btn{min-height:44px; padding:12px 26px}
+@media (max-width:900px){ .nav a:not(.btn){display:none} }
+
+/* ---------- hero ---------- */
+.hero{
+  padding-top:clamp(132px,15vw,180px); padding-bottom:0;
+  border-bottom:1px solid var(--hairline); overflow:hidden;
+}
+.hero__grid{
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.86fr);
+  gap:clamp(24px,5vw,64px); align-items:end;
+}
+.hero__copy{padding-bottom:clamp(72px,9vw,128px)}
+.hero__name{
+  font-family:var(--ff-body); font-weight:300; text-transform:uppercase;
+  font-size:clamp(29px,4.6vw,60px); line-height:1.05; letter-spacing:.12em;
+  color:var(--ink-strong); margin:0;
+}
+.hero__name sup{font-size:.3em; letter-spacing:.04em; vertical-align:super; font-weight:400; text-transform:none}
+.hero__title{
+  display:flex; align-items:center; gap:18px; margin:26px 0 10px;
+  font-family:var(--ff-label); font-weight:400; text-transform:uppercase;
+  font-size:clamp(14px,1.5vw,19px); letter-spacing:.22em; color:var(--ink-strong);
+}
+.hero__title::after{content:""; height:1px; background:var(--hairline-strong); flex:1}
+.hero__scope{
+  font-family:var(--ff-label); text-transform:uppercase;
+  font-size:clamp(12px,1.25vw,16px); letter-spacing:.22em; color:var(--accent-deep); margin:0;
+}
+.hero__claim{
+  font-family:var(--ff-display); font-size:clamp(38px,5.6vw,84px); line-height:1.04;
+  letter-spacing:-.015em; color:var(--ink-strong); margin:clamp(40px,5vw,64px) 0 0;
+}
+.hero__claim em{font-style:normal; color:var(--accent-deep)}
+.hero__photo{position:relative; align-self:end; margin-bottom:-1px}
+.hero__photo img{width:100%; max-width:620px; margin-left:auto; display:block}
+.hero__phone{
+  display:inline-flex; align-items:baseline; gap:14px; margin-top:36px;
+  text-decoration:none; color:var(--ink-strong);
+}
+.hero__phone span{font-family:var(--ff-label); font-size:11.5px; text-transform:uppercase; letter-spacing:.24em; color:var(--accent-deep)}
+.hero__phone strong{font-family:var(--ff-body); font-weight:500; font-size:clamp(24px,2.6vw,34px); letter-spacing:-.01em}
+@media (max-width:860px){
+  .hero__grid{grid-template-columns:1fr}
+  .hero__copy{padding-bottom:48px}
+  .hero__photo img{max-width:420px; margin-inline:auto}
+}
+
+/* ---------- about ---------- */
+.about__grid{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(32px,6vw,96px)}
+.stats{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,3vw,40px); margin-top:56px; padding-top:40px; border-top:1px solid var(--hairline)}
+.stat__n{font-family:var(--ff-display); font-size:clamp(30px,3.4vw,46px); line-height:1; color:var(--ink-strong)}
+.stat__l{font-family:var(--ff-label); font-size:11px; text-transform:uppercase; letter-spacing:.24em; color:var(--accent-deep); margin-top:12px}
+@media (max-width:860px){ .about__grid{grid-template-columns:1fr} }
+
+/* ---------- services ---------- */
+.services{background:var(--surface-2)}
+.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--hairline); margin-top:64px; border:1px solid var(--hairline)}
+.card{background:var(--surface-1); padding:clamp(32px,3.4vw,52px); transition:transform .5s var(--ease),background .5s var(--ease)}
+.card:hover{transform:translateY(-4px); background:var(--canvas)}
+.card__i{width:30px; height:30px; color:var(--accent-deep); margin-bottom:28px}
+.card__i svg{width:100%; height:100%; display:block; fill:none; stroke:currentColor; stroke-width:1.25}
+.card h3{margin-bottom:14px}
+.card p{font-size:16px; color:var(--ink-muted)}
+.card ul{list-style:none; margin:24px 0 0; padding:0}
+.card li{font-family:var(--ff-label); font-size:12px; text-transform:uppercase; letter-spacing:.16em; color:var(--ink); padding:11px 0; border-top:1px solid var(--hairline)}
+@media (max-width:900px){ .cards{grid-template-columns:1fr} }
+
+/* ---------- process ---------- */
+.steps{counter-reset:s; margin-top:64px; border-top:1px solid var(--hairline)}
+.step{
+  counter-increment:s; display:grid; grid-template-columns:96px minmax(0,1fr) minmax(0,1.3fr);
+  gap:clamp(16px,3vw,48px); align-items:start;
+  padding:clamp(28px,3.4vw,44px) 0; border-bottom:1px solid var(--hairline);
+}
+.step::before{
+  content:"0" counter(s);
+  font-family:var(--ff-display); font-size:clamp(26px,2.8vw,38px); line-height:1; color:var(--accent);
+}
+.step p{font-size:16px; color:var(--ink-muted); margin:0}
+@media (max-width:860px){ .step{grid-template-columns:64px 1fr} .step p{grid-column:2} }
+
+/* ---------- CTA band (thème foncé) ---------- */
+.cta{background:var(--canvas); color:var(--ink)}
+.cta h2{max-width:18ch}
+.cta__grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(32px,6vw,96px); align-items:center}
+.cta .lede{color:var(--ink-muted)}
+.cta .btn--primary{background:var(--inverse-canvas); color:var(--inverse-ink)}
+.cta .btn--primary:hover{background:var(--accent)}
+.cta .btn--ghost{border-color:var(--hairline-strong); color:var(--ink)}
+.cta .btn--ghost:hover{background:var(--inverse-canvas); border-color:var(--inverse-canvas); color:var(--inverse-ink)}
+@media (max-width:860px){ .cta__grid{grid-template-columns:1fr} }
+
+/* ---------- contact ---------- */
+.contact__grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(32px,6vw,96px)}
+.dl{margin:0; border-top:1px solid var(--hairline)}
+.dl div{display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid var(--hairline)}
+.dl dt{font-family:var(--ff-label); font-size:11px; text-transform:uppercase; letter-spacing:.24em; color:var(--accent-deep)}
+.dl dd{margin:0; font-size:18px; color:var(--ink-strong); text-align:right}
+.dl dd a{text-decoration:none; border-bottom:1px solid var(--hairline-strong); padding-bottom:2px; transition:border-color .3s var(--ease)}
+.dl dd a:hover{border-color:var(--ink-strong)}
+@media (max-width:860px){ .contact__grid{grid-template-columns:1fr} }
+
+/* ---------- footer ---------- */
+.site-foot{border-top:1px solid var(--hairline); padding-block:clamp(48px,6vw,80px)}
+.foot__top{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:40px}
+.foot__logo{width:210px; color:var(--ink)}
+.brokerage{display:flex; align-items:center; gap:clamp(20px,3vw,36px)}
+.brokerage img{height:86px; width:auto}
+.brokerage__sep{width:1px; align-self:stretch; background:var(--hairline-strong)}
+.brokerage__pending{
+  font-family:var(--ff-label); font-size:10.5px; text-transform:uppercase; letter-spacing:.18em;
+  color:var(--accent-deep); border:1px dashed var(--hairline-strong); padding:14px 18px; max-width:190px; line-height:1.6;
+}
+.foot__legal{
+  display:flex; flex-wrap:wrap; gap:8px 28px; margin-top:44px; padding-top:28px; border-top:1px solid var(--hairline);
+  font-size:13px; color:var(--ink-muted);
+}
+.foot__legal a{text-decoration:none; border-bottom:1px solid transparent}
+.foot__legal a:hover{border-bottom-color:var(--accent)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0; transform:translateY(24px)}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1 !important; transform:none !important}
+  *{animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important}
+}
+.skip{position:absolute; left:-9999px}
+.skip:focus{left:var(--gutter); top:12px; z-index:100; background:var(--ink-strong); color:var(--canvas); padding:12px 20px}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-head" id="head">
+  <a class="site-head__logo" href="#top" aria-label="VF Immobilier — accueil">
+    <img src="assets/logo-vf-mark.svg" alt="VF Immobilier" width="132" height="62">
+  </a>
+  <nav class="nav" aria-label="Principale">
+    <a href="#services">Services</a>
+    <a href="#approche">Approche</a>
+    <a href="#evaluation">Évaluation</a>
+    <a href="#contact" class="btn btn--primary">Me joindre</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <h1 class="hero__name">Vanessa&nbsp;Fournier<sup>inc.</sup></h1>
+      <p class="hero__title">Courtier immobilier</p>
+      <p class="hero__scope">Commercial &middot; Industriel &middot; Résidentiel</p>
+
+      <p class="hero__claim rv">Investir.<br>Acheter. Vendre.<br><em>Avec stratégie.</em></p>
+
+      <div class="btn-row rv">
+        <a class="btn btn--primary" href="#evaluation">Obtenir une évaluation</a>
+        <a class="btn btn--ghost" href="#services">Voir les services</a>
+      </div>
+
+      <a class="hero__phone rv" href="tel:+15148165798">
+        <span>Parlons-en</span><strong>514&nbsp;816-5798</strong>
+      </a>
+    </div>
+
+    <div class="hero__photo">
+      <picture>
+        <source srcset="assets/vanessa-1400.webp" type="image/webp" media="(min-width:861px)">
+        <source srcset="assets/vanessa-900.webp" type="image/webp">
+        <img src="assets/vanessa-900.jpg" alt="Vanessa Fournier, courtier immobilier" width="1400" height="1979" fetchpriority="high">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section id="approche">
+  <div class="wrap about__grid">
+    <div>
+      <p class="eyebrow rv">L'approche</p>
+      <h2 class="rv">Une transaction<br>se prépare<br>avant de se signer.</h2>
+    </div>
+    <div class="rv">
+      <p class="lede">Que ce soit un immeuble à revenus, un local industriel ou la maison
+      familiale, la question de départ est la même&nbsp;: qu'est-ce que cette
+      propriété doit accomplir pour vous&nbsp;?</p>
+      <p>Je travaille les deux marchés — commercial et résidentiel — sous la bannière
+      Royal LePage Urbain. Ça veut dire une lecture des chiffres avant les émotions,
+      une évaluation appuyée sur des comparables réels, et une négociation menée avec
+      un plan plutôt qu'avec de l'espoir.</p>
+      <p>Vous restez décideur. Mon rôle est de vous donner l'information dont vous avez
+      besoin pour décider vite et bien — et de tenir le dossier jusqu'à la signature
+      chez le notaire.</p>
+
+      <div class="stats">
+        <div class="stat"><div class="stat__n">3</div><div class="stat__l">Secteurs couverts</div></div>
+        <div class="stat"><div class="stat__n">2</div><div class="stat__l">Bannières Royal LePage</div></div>
+        <div class="stat"><div class="stat__n">24&nbsp;h</div><div class="stat__l">Délai de réponse</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="eyebrow rv">Les services</p>
+    <h2 class="rv measure">Trois marchés,<br>une même méthode.</h2>
+
+    <div class="cards">
+      <article class="card rv">
+        <div class="card__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 12h2M13 12h2M9 16h2M13 16h2"/></svg></div>
+        <h3>Commercial</h3>
+        <p>Immeubles à revenus, locaux d'affaires, terrains à développer. On regarde le
+        rendement, pas seulement le prix affiché.</p>
+        <ul>
+          <li>Analyse de rendement</li>
+          <li>Immeubles à revenus</li>
+          <li>Location commerciale</li>
+        </ul>
+      </article>
+
+      <article class="card rv">
+        <div class="card__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V9l6-3v15M10 21V6l10 3v12M14 12h2M14 16h2"/></svg></div>
+        <h3>Industriel</h3>
+        <p>Entrepôts, ateliers, espaces de production. Zonage, hauteur libre, accès
+        camion&nbsp;: les détails qui font ou défont un bail.</p>
+        <ul>
+          <li>Vérification de zonage</li>
+          <li>Entrepôt &amp; production</li>
+          <li>Acquisition d'occupant</li>
+        </ul>
+      </article>
+
+      <article class="card rv">
+        <div class="card__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v11h14V10M10 21v-6h4v6"/></svg></div>
+        <h3>Résidentiel</h3>
+        <p>Première propriété, revente, plex. Une mise en marché préparée, des visites
+        filtrées, une promesse d'achat solide.</p>
+        <ul>
+          <li>Mise en marché</li>
+          <li>Achat &amp; revente</li>
+          <li>Plex &amp; multilogements</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESSUS ============ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow rv">Le processus</p>
+    <h2 class="rv measure">Ce à quoi vous<br>pouvez vous attendre.</h2>
+
+    <div class="steps">
+      <div class="step rv"><h3>Rencontre</h3><p>On clarifie l'objectif, le budget réel et l'échéancier. Sans engagement, et sans discours de vente.</p></div>
+      <div class="step rv"><h3>Analyse</h3><p>Comparables, historique du secteur, contraintes de zonage ou de financement. Vous recevez les chiffres, pas une impression.</p></div>
+      <div class="step rv"><h3>Stratégie</h3><p>Prix, positionnement, séquence de mise en marché ou d'offre. On décide ensemble avant de bouger.</p></div>
+      <div class="step rv"><h3>Exécution</h3><p>Visites, négociation, conditions, inspections. Je pilote les échéances jusqu'à la signature chez le notaire.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÉVALUATION (thème foncé) ============ -->
+<section class="cta" id="evaluation" data-theme="dark">
+  <div class="wrap cta__grid">
+    <div>
+      <p class="eyebrow rv">Évaluation</p>
+      <h2 class="rv">Combien vaut votre propriété aujourd'hui&nbsp;?</h2>
+    </div>
+    <div class="rv">
+      <p class="lede">Une évaluation appuyée sur les transactions réelles de votre secteur —
+      commerciales comme résidentielles. Gratuite, sans obligation, livrée sous 48&nbsp;heures.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="mailto:info@vfimmobilier.com?subject=Demande%20d%27%C3%A9valuation">Demander mon évaluation</a>
+        <a class="btn btn--ghost" href="tel:+15148165798">514 816-5798</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact__grid">
+    <div>
+      <p class="eyebrow rv">Contact</p>
+      <h2 class="rv">Un projet,<br>une question,<br>un chiffre à valider.</h2>
+      <p class="lede rv" style="margin-top:28px">Le plus simple reste le téléphone. Sinon, écrivez-moi&nbsp;:
+      je réponds à tous les courriels sous 24&nbsp;heures ouvrables.</p>
+    </div>
+    <div class="rv">
+      <dl class="dl">
+        <div><dt>Téléphone</dt><dd><a href="tel:+15148165798">514 816-5798</a></dd></div>
+        <div><dt>Courriel</dt><dd><a href="mailto:info@vfimmobilier.com">info@vfimmobilier.com</a></dd></div>
+        <div><dt>Site</dt><dd><a href="https://vfimmobilier.com">vfimmobilier.com</a></dd></div>
+        <div><dt>Bannière</dt><dd>Royal LePage Urbain</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <img class="foot__logo" src="assets/logo-vf.svg" alt="VF Immobilier — commercial, industriel, résidentiel">
+      <div class="brokerage">
+        <img src="assets/rlp-urbain-agence.png" alt="Royal LePage Urbain — agence immobilière franchisée indépendante et autonome">
+        <div class="brokerage__sep" aria-hidden="true"></div>
+        <!-- TODO client : remplacer par le logo Royal LePage Commercial fourni -->
+        <p class="brokerage__pending">Logo Royal LePage Commercial — en attente du fichier client</p>
+      </div>
+    </div>
+    <div class="foot__legal">
+      <span>&copy; <span id="yr">2026</span> Vanessa Fournier inc.</span>
+      <span>Courtier immobilier</span>
+      <span>Royal LePage Urbain, agence immobilière — franchisée indépendante et autonome</span>
+      <a href="tel:+15148165798">514 816-5798</a>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"RealEstateAgent",
+  "name":"Vanessa Fournier inc.",
+  "jobTitle":"Courtier immobilier",
+  "url":"https://vfimmobilier.com/",
+  "telephone":"+1-514-816-5798",
+  "email":"info@vfimmobilier.com",
+  "image":"https://vfimmobilier.com/assets/og-vf-immobilier.jpg",
+  "areaServed":"Grand Montréal, Québec, Canada",
+  "knowsLanguage":["fr-CA","en-CA"],
+  "parentOrganization":{"@type":"Organization","name":"Royal LePage Urbain"},
+  "makesOffer":[
+    {"@type":"Offer","name":"Courtage immobilier commercial"},
+    {"@type":"Offer","name":"Courtage immobilier industriel"},
+    {"@type":"Offer","name":"Courtage immobilier résidentiel"},
+    {"@type":"Offer","name":"Évaluation gratuite de propriété"}
+  ]
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.14/lenis.min.js" defer></script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+window.addEventListener('load', function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var head = document.getElementById('head');
+
+  // header state
+  var onScroll = function () { head.classList.toggle('is-stuck', window.scrollY > 24); };
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  if (reduced || !window.gsap) {
+    document.querySelectorAll('.rv').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // smooth scroll
+  if (window.Lenis) {
+    var lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); lenis.scrollTo(t, { offset: -80 }); }
+      });
+    });
+  }
+
+  // reveals
+  gsap.utils.toArray('.rv').forEach(function (el) {
+    gsap.to(el, {
+      opacity: 1, y: 0, duration: .9, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+    });
+  });
+});
+</script>
+</body>
+</html>
