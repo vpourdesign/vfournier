@@ -1,276 +1,217 @@
 ---
-version: 1.0
+version: 2.0
 name: VF-Immobilier-design-system
 client: Vanessa Fournier inc. — courtier immobilier, Royal LePage Urbain / Royal LePage Commercial
-description: "Système éditorial calme et haut de gamme construit sur un fond crème #F7F3EE, une encre gris chaud #4D4D4D et un unique accent taupe #A59D95. Le langage vient direct de la papeterie : un monogramme VF en didone (Playfair Display), des mots-clés en capitales très trackées flanqués de filets fins, et beaucoup de silence autour. Aucun aplat de couleur, aucune ombre portée, aucun dégradé. Le rouge Royal LePage n'existe que dans le logo de la bannière — jamais dans l'interface. La hiérarchie se joue par l'échelle typographique et le tracking, pas par le poids ni la couleur."
+source: "Papeterie FINALE approuvée, août 2026 : pancarte résidentielle, pancarte commerciale, carte de visite (PDF)."
+description: "Duo-ton strict. Un crème #F1EFEC et un noir #000, rien d'autre. La hiérarchie se joue par le contraste de graisse d'une seule famille géométrique (VANESSA léger / FOURNIER noir) et par l'inversion des champs, jamais par la couleur. Aucun accent chromatique, aucune ombre, aucun dégradé, aucun coin arrondi. Le rouge Royal LePage n'existe que dans le logo."
 
 themes: [pale, fonce]
 
 colors:
-  # --- Thème PÂLE (défaut, web + carte d'affaires + pancarte) ---
-  canvas: "#F7F3EE"          # fond principal — crème
-  surface-1: "#FFFFFF"       # cartes, panneaux surélevés
-  surface-2: "#F0EBE4"       # bandes alternées, zones calmes
-  ink: "#4D4D4D"             # texte principal (VF, IMMOBILIER, titres)
-  ink-strong: "#1A1A1A"      # noir de pancarte — chiffres, nom sur visuels imprimés
-  ink-muted: "#6E6862"       # texte courant long
-  accent: "#A59D95"          # texte secondaire, filets, labels — l'accent unique
-  accent-deep: "#8A8078"     # accent sur fond clair quand AA est requis (texte < 18px)
-  hairline: "#DCD5CC"        # traits de séparation 1px
-  hairline-strong: "#C4BBB0"
-  inverse-canvas: "#F7F3EE"  # NE SE SURCHARGE JAMAIS — bouton clair sur bloc foncé
-  inverse-ink: "#1A1A1A"     # NE SE SURCHARGE JAMAIS — texte sur ce bouton
-  # --- Thème FONCÉ (pancarte foncée, section contact, futur dark mode) ---
+  # --- Thème PÂLE (pancarte résidentielle, carte de visite) ---
+  canvas: "#F1EFEC"          # fond crème, échantillonné dans les deux pancartes
+  surface-1: "#FFFFFF"       # cartouche blanc du logo Royal LePage, cartes
+  surface-2: "#E7E4DF"       # bande calme
+  ink-strong: "#000000"      # nom, téléphone, gros titres — noir pur imprimé
+  ink: "#312F30"             # texte courant — l'encre de la carte de visite
+  ink-muted: "#6B6866"
+  hairline: "#D6D2CD"
+  hairline-strong: "#B6B1AB"
+  inverse-canvas: "#F1EFEC"  # NE SE SURCHARGE JAMAIS
+  inverse-ink: "#000000"     # NE SE SURCHARGE JAMAIS
+  # --- Thème FONCÉ (pancarte commerciale) ---
   dark-canvas: "#000000"
-  dark-surface-1: "#141210"
-  dark-ink: "#FFFFFF"
-  dark-ink-muted: "#CFC8C0"
-  dark-accent: "#A59D95"
-  dark-hairline: "#2E2A26"
-  # --- Marque partenaire (usage logo uniquement, jamais en UI) ---
+  dark-surface-1: "#0D0C0C"
+  dark-ink-strong: "#F1EFEC"  # crème sur noir, jamais blanc pur
+  dark-ink: "#D9D5D0"
+  dark-ink-muted: "#A5A09B"
+  dark-hairline: "#2B2928"
+  # --- Marque partenaire (logo uniquement, jamais en UI) ---
   rlp-red: "#FF0000"
 
 typography:
-  monogram:
-    fontFamily: Playfair Display
-    fontWeight: 500
-    letterSpacing: 0.02em
-    usage: "Uniquement VF. Jamais pour du texte courant."
-  display-xl:
-    fontFamily: Playfair Display
-    fontSize: clamp(44px, 6.2vw, 92px)
-    fontWeight: 400
-    lineHeight: 1.06
-    letterSpacing: -0.015em
-  display-lg:
-    fontFamily: Playfair Display
-    fontSize: clamp(32px, 4vw, 56px)
-    fontWeight: 400
-    lineHeight: 1.12
-    letterSpacing: -0.01em
-  headline:
-    fontFamily: Playfair Display
-    fontSize: clamp(24px, 2.4vw, 34px)
-    fontWeight: 400
-    lineHeight: 1.2
-  label:
-    fontFamily: Jost
-    fontSize: 12px
-    fontWeight: 400
+  families:
+    display: Montserrat        # substitut libre de Gotham (pancartes) ; Montserrat est déjà dans le PDF de la carte
+    body: Inter                # substitut de Roboto, le petit texte de la papeterie
+  name-given:                  # « VANESSA »
+    fontFamily: Montserrat
+    fontWeight: 300
+    fontSize: clamp(25px, 3.5vw, 47px)
+    letterSpacing: 0.10em
     textTransform: uppercase
-    letterSpacing: 0.28em
-    usage: "Sur-titres de section, nav, tags. TOUJOURS flanqué ou suivi d'un filet."
-  label-lg:
-    fontFamily: Jost
-    fontSize: clamp(15px, 1.6vw, 20px)
-    fontWeight: 400
+  name-family:                 # « FOURNIER »
+    fontFamily: Montserrat
+    fontWeight: 800
+    fontSize: clamp(37px, 5.6vw, 76px)
+    letterSpacing: -0.025em
+    textTransform: uppercase
+  display:                     # titres de section
+    fontFamily: Montserrat
+    fontWeight: 300            # la partie accentuée passe à 800
+    fontSize: clamp(27px, 3.2vw, 44px)
+    lineHeight: 1.16
+  label:
+    fontFamily: Montserrat
+    fontWeight: 500
+    fontSize: 10.5px
     textTransform: uppercase
     letterSpacing: 0.22em
-    usage: "COURTIER IMMOBILIER · COMMERCIAL & RÉSIDENTIEL sous le nom."
-  name-lockup:
-    fontFamily: Inter
-    fontSize: clamp(30px, 5vw, 64px)
-    fontWeight: 300
-    textTransform: uppercase
-    letterSpacing: 0.14em
-    usage: "VANESSA FOURNIER — le lockup nom, repris de la pancarte."
-  body-lg:
-    fontFamily: Inter
-    fontSize: 19px
-    fontWeight: 300
-    lineHeight: 1.65
+  numeric:                     # téléphone, versement, chiffres de preuve
+    fontFamily: Montserrat
+    fontWeight: 800
+    letterSpacing: -0.02em
   body:
     fontFamily: Inter
-    fontSize: 17px
     fontWeight: 300
+    fontSize: 17px
     lineHeight: 1.7
-  body-sm:
-    fontFamily: Inter
-    fontSize: 15px
-    fontWeight: 400
-    lineHeight: 1.6
-  numeric:
-    fontFamily: Inter
-    fontWeight: 500
-    letterSpacing: -0.01em
-    usage: "Téléphone, chiffres de preuve. Le numéro est un élément de design, pas une note de bas de page."
 
 spacing:
   unit: 8px
-  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 176]
   section-y: clamp(88px, 11vw, 176px)
   gutter: clamp(24px, 5vw, 80px)
   max-width: 1280px
   measure: 62ch
 
 radii:
-  none: 0px
-  sign: 18px        # coin de pancarte — usage visuel imprimé seulement
-  pill: 999px
   default: 0px      # RÈGLE : l'UI est à angles vifs
 
 motion:
   easing: cubic-bezier(0.22, 1, 0.36, 1)
-  duration-fast: 240ms
+  duration-fast: 280ms
   duration: 620ms
-  reveal: "opacity 0→1 + translateY 24px→0, stagger 90ms"
+  reveal: "opacity 0→1 + translateY 24px→0"
+  section: "le fond de chaque champ noir se déploie de haut en bas au défilement (clip-path, GSAP ScrollTrigger, scrub)"
   respect: prefers-reduced-motion
 ---
 
-# VF Immobilier — DESIGN.md
+# VF Immobilier — DESIGN.md v2.0
 
-Système de design de la marque **Vanessa Fournier inc.**, extrait de la papeterie
-existante (carte d'affaires, pancarte résidentielle, pancarte commerciale) et
-étendu au web.
+Système extrait de la **papeterie finale approuvée** (août 2026) : pancarte
+résidentielle, pancarte commerciale, carte de visite.
+
+> **Ce qui a changé depuis la v1.0.** La v1.0 avait été extraite de maquettes de
+> travail. Les finales approuvées tranchent autrement, et c'est elles qui font foi :
+>
+> | | v1.0 (maquettes) | v2.0 (finales approuvées) |
+> |---|---|---|
+> | Crème | `#F7F3EE` | **`#F1EFEC`** |
+> | Accent | taupe `#A59D95` | **aucun** — le système est strictement duo-ton |
+> | Titres | Playfair Display | **Montserrat 300 / 800** (Gotham à l'impression) |
+> | Capitales | Jost | **Montserrat 500** |
+> | Hiérarchie | par le tracking | **par le contraste de graisse** |
+> | Sur fond noir | titres taupe | **titres crème `#F1EFEC`** |
+>
+> Le serif ne survit que dans le monogramme VF de la carte de visite
+> (Cormorant SC à l'impression), livré en SVG vectorisé : aucune police à charger.
 
 ## Le principe
 
-> Une courtière qui vend du commercial et de l'industriel ne se vend pas comme
-> une courtière résidentielle. Le système doit lire **conseil**, pas **vente**.
+Deux couleurs, une famille, deux graisses. C'est tout.
 
-Trois leviers, et rien d'autre :
-
-1. **Le silence.** Le blanc tournant est le composant le plus important. Aucune
-   section ne dépasse 62ch de mesure de lecture.
-2. **Le tracking.** La hiérarchie secondaire passe par l'espacement des lettres
-   en capitales, jamais par le gras ni la couleur.
-3. **Le filet.** Un trait de 1 à 2px, taupe, flanque ou souligne les libellés.
-   C'est la seule ornementation autorisée du système.
-
-## Tokens
-
-Tous les tokens vivent en variables CSS sur `:root`. Le thème foncé est un
-override de bloc (`[data-theme="dark"]`) — **aucune couleur n'est écrite en dur
-dans un composant.** C'est ce qui rend la version foncée gratuite.
-
-```css
-:root {
-  --canvas: #F7F3EE;  --surface-1: #FFFFFF;  --surface-2: #F0EBE4;
-  --ink: #4D4D4D;     --ink-strong: #1A1A1A; --ink-muted: #6E6862;
-  --accent: #A59D95;  --accent-deep: #8A8078;
-  --hairline: #DCD5CC;
-  --inverse-canvas: #F7F3EE; --inverse-ink: #1A1A1A;  /* jamais surchargés */
-}
-[data-theme="dark"] {
-  --canvas: #000000;  --surface-1: #141210;  --surface-2: #0B0A09;
-  --ink: #FFFFFF;     --ink-strong: #FFFFFF; --ink-muted: #CFC8C0;
-  --accent: #A59D95;  --accent-deep: #A59D95;
-  --hairline: #2E2A26;
-}
-```
-
-### Règle de contraste (non négociable)
-
-`#A59D95` sur `#F7F3EE` donne **~2.2:1** — insuffisant pour du texte. L'accent
-taupe est autorisé pour : les filets, les capitales trackées ≥ 16px en usage
-décoratif, et les icônes. Pour tout texte porteur d'information sur fond crème,
-utiliser `--accent-deep` (#8A8078, ~3.4:1) minimum, ou `--ink`. Sur fond noir,
-`#A59D95` passe à ~7:1 et redevient utilisable partout.
-
-## Typographie
-
-| Rôle | Famille | Pourquoi |
-|---|---|---|
-| Monogramme VF | **Playfair Display** 500 | Didone à fort contraste, calque du logo existant |
-| Titres | **Playfair Display** 400 | Prolonge le monogramme sans le répéter |
-| Capitales trackées | **Jost** 400 | Géométrique type Futura — c'est la typo de `IMMOBILIER` |
-| Texte courant + nom | **Inter** 300/400 | Grotesque neutre, la typo de `VANESSA FOURNIER` sur pancarte |
-
-Pas de quatrième famille. Pas d'italique. Pas de gras au-delà de 500.
+1. **L'inversion.** Le crème et le noir alternent en champs pleins. Un champ noir
+   n'est pas une « section foncée » décorative : c'est la pancarte commerciale.
+2. **La graisse.** `VANESSA` léger au-dessus de `FOURNIER` noir. Ce contraste,
+   et lui seul, porte la hiérarchie — dans le lockup, dans les titres, dans les
+   chiffres. Jamais par la couleur.
+3. **Le bandeau.** Une bande crème posée dans un champ noir, capitales noires très
+   trackées et centrées — le « À VENDRE » de la pancarte commerciale, et le
+   `VFIMMOBILIER.COM` qui ferme les deux pancartes.
 
 ## Composants
 
-### `logo` — le lockup
-Trois variantes livrées en SVG (contours vectorisés, aucune dépendance de police) :
-`logo-vf.svg` (pâle), `logo-vf-dark.svg` (foncé), `logo-vf-mono.svg` (`currentColor`),
-`logo-vf-mark.svg` (VF + IMMOBILIER seuls, pour l'en-tête et le favicon).
-Zone de protection = la hauteur du `V`. Taille minimale du lockup complet : 180px de large.
+### `name-lockup` — le lockup nom
+Deux lignes collées (`line-height: .92`) : le prénom en 300 légèrement rentré,
+le patronyme en 800 à fleur de marge, `inc.` en 400 taille .26em collé au `R`.
+Sous le lockup, le titre professionnel en capitales trackées, puis un filet 1px
+pleine largeur. C'est la composition des deux pancartes.
 
-### `eyebrow` — sur-titre de section
-Capitale trackée `label` en `--accent-deep`, précédée d'un filet de 48px.
-**Jamais de puce, de point, ni de pilule autour.**
-
-### `rule` — le filet
-1px `--hairline`. En version « flanquante » (comme dans le logo) : 2px `--accent`,
-longueur fixe, aligné sur la médiane des capitales.
-
-### `stat` — la preuve chiffrée
-Nombre en `display-lg` Playfair, libellé en `label`. Séparés par un filet vertical.
-Aucun cadre, aucun fond.
-
-### `card-service`
-Fond `--surface-1`, angles vifs, filet 1px `--hairline`. Au survol : le filet passe
-à `--accent`, translation Y de -4px. Aucune ombre — jamais.
+### `band` — le bandeau
+Fond `--inverse-canvas`, texte `--inverse-ink`, Montserrat 500, `letter-spacing: .34em`,
+centré. Ne s'emploie **que** posé dans un champ noir, jamais sur crème (il y
+disparaîtrait). Deux usages : en-tête d'un champ noir, et clôture de page.
 
 ### `btn`
-- **Primaire** : fond `--ink-strong`, texte `--canvas`, angles vifs, padding 18/40,
-  `label` tracké. Survol : fond `--accent-deep`.
-- **Secondaire** : transparent, filet 1px `--ink`, texte `--ink`.
-- **Sur bloc `[data-theme="dark"]`** : le primaire s'inverse en `--inverse-canvas` /
-  `--inverse-ink`. Ne jamais utiliser `--canvas` ici — il vaut #000 dans le thème
-  foncé et le bouton disparaîtrait.
-- Zone tactile minimale 48px.
+- **Primaire** : fond `--ink-strong`, texte **blanc** `--surface-1`. Survol : fond `--ink`.
+- **Fantôme** : filet 1px `--ink`. Survol : se remplit d'encre, texte blanc.
+- Sur champ noir, le primaire s'inverse en `--inverse-canvas` / `--inverse-ink`.
+- Zone tactile minimale 48px. Libellés en Montserrat 600, `.22em`.
 
 ### `phone` — le numéro
-Le 514 816-5798 est traité comme un élément de design (voir pancarte) :
-`Inter 500`, échelle `display-lg`, `--ink-strong`. Toujours cliquable (`tel:`).
+Montserrat 800, `-.02em`, `tabular-nums`. C'est le deuxième plus gros élément de
+la page après le lockup, comme sur la pancarte. Toujours cliquable (`tel:`).
+
+### `card`
+Fond `--surface-1`, angles vifs, aucune ombre. Les gouttières 1px de la grille sur
+fond `--hairline` **sont** les séparateurs. Survol : `translateY(-4px)`, rien d'autre.
 
 ## Grille & mise en page
 
-- Conteneur 1280px, gouttières fluides `clamp(24px, 5vw, 80px)`.
-- Grille 12 colonnes desktop / 6 tablette / 1 mobile.
-- **Composition signature** : texte à gauche sur 6–7 colonnes, photo détourée à
-  droite débordant le bas de la section. C'est la composition de la pancarte —
-  on la rejoue en hero.
-- Rythme vertical : `section-y` partout, sans exception.
+Conteneur 1280px, gouttières `clamp(24px, 5vw, 80px)`, rythme vertical `section-y`
+sans exception, mesure de lecture 62ch.
+
+**Composition signature** : texte à gauche, portrait détouré à droite débordant le
+bas de la section. C'est la pancarte, rejouée en hero.
 
 ## Photographie
 
-Portraits **détourés sur crème**, jamais en cadre ni en médaillon rond. La photo
-touche le bord bas de sa section (elle « se tient dans » la page). Aucun filtre,
-aucune vignette. Assets : `vanessa-1400.webp` / `vanessa-900.webp` (+ fallback PNG),
-alpha propre, décontaminés du halo blanc.
+Deux portraits, appariés au champ :
+
+| Champ | Portrait | Fichier |
+|---|---|---|
+| Crème | veston pâle, détouré | `vanessa-1400/900.webp` |
+| Crème | robe noire, détourée | `vanessa-robe-1400/900.webp` |
+| Noir | robe noire sur noir pur | `vanessa-noir-1400/900.webp` |
+
+Jamais de cadre, jamais de médaillon rond, aucun filtre, aucune vignette.
+La photo touche le bord bas de sa section.
 
 ## Marque partenaire — Royal LePage
 
-Obligation de bannière : le logo **Royal LePage Urbain** avec la mention
-« Agence immobilière · Franchisée indépendante et autonome » apparaît dans le pied
-de page, à hauteur ≥ 64px. Le logo **Royal LePage Commercial** se place à sa droite,
-séparé par un filet vertical (c'est la disposition de la papeterie).
+Bannière obligatoire au pied de page, hauteur ≥ 64px : **Royal LePage Urbain** avec
+la mention « Agence immobilière · Franchisée indépendante et autonome », puis un
+filet vertical, puis **Royal LePage Commercial**. Sur champ noir, utiliser
+`rlp-urbain-agence-blanc.png` (neutres inversés en crème, rouge intact).
 
-> ⚠️ **En attente client** : les fichiers Royal LePage Commercial n'ont pas encore
-> été fournis. Placeholder en place dans le pied de page, à remplacer.
+Le rouge `#FF0000` reste **strictement dans le logo**. Jamais un bouton, un lien,
+une bordure ni un fond.
 
-Le rouge `#FF0000` de la bannière reste **strictement dans le logo**. Il ne devient
-jamais une couleur d'interface, de bouton, ni de lien.
+> ⚠️ **En attente client** : les fichiers Royal LePage Commercial n'ont toujours pas
+> été fournis en vectoriel. Ils apparaissent dans les PDF d'impression mais pas en
+> fichier isolé. Placeholder en pointillé dans le pied de page.
 
-## Interdits (règles anti-clutter)
+## Interdits
 
-- Aucune ombre portée, aucun `box-shadow`, aucun dégradé de fond.
-- Aucun coin arrondi dans l'UI (le `radius: sign` est réservé aux visuels imprimés).
-- Aucune puce décorative, aucun « chip » de branding, aucun sur-titre à point coloré.
-- Aucun pied de page du type « VF IMMOBILIER — 2026 / VOTRE PARTENAIRE ».
-- Aucune icône pleine — traits 1.25px uniquement.
-- Pas plus d'un accent chromatique par écran.
-- Pas de superlatif non prouvable dans le contenu (« le meilleur », « n°1 »).
+- Aucun accent chromatique. Le système a **deux** couleurs.
+- Aucune ombre portée, aucun `box-shadow`, aucun dégradé, aucune texture.
+- Aucun coin arrondi dans l'UI.
+- Aucun serif hors du monogramme VF.
+- Aucune graisse intermédiaire pour créer de la hiérarchie : 300 ou 800, pas 600.
+- Aucune puce décorative, aucun emoji, aucun chevron ornemental.
+- Aucun superlatif non prouvable (« le meilleur », « n°1 »).
+- Blanc pur `#FFF` et noir pur `#000` : le noir est permis (c'est celui de la
+  pancarte), le blanc ne sert que de surface de carte et de texte sur bouton noir.
 
-## Accessibilité
+## Contenu
 
-Cible **WCAG 2.1 AA**. Focus visible : contour 2px `--ink-strong` avec offset 3px.
-Toute animation est désactivée sous `prefers-reduced-motion`. Le numéro de téléphone
-et le courriel sont des liens natifs. Langue du document : `fr-CA`.
-
-## Contenu de référence
+Français du Québec (`fr-CA`), « je » pour Vanessa, « vous » pour le client, jamais
+« nous ». Ton direct, factuel, phrases courtes. Titres en casse de phrase terminés
+par un point. Espaces insécables devant `?`, `!`, `:`, `;` et dans les nombres.
 
 - Nom : Vanessa Fournier inc.
-- Titre : Courtier immobilier — commercial & résidentiel
+- Titre exact (pancarte) : **Courtier immobilier commercial et résidentiel**
 - Positionnement : **Investir. Acheter. Vendre. Avec stratégie.**
-- Portée : Commercial · Industriel · Résidentiel
 - Téléphone : 514 816-5798 · Courriel : info@vfimmobilier.com · Site : vfimmobilier.com
 - Bannière : Royal LePage Urbain, agence immobilière franchisée indépendante et autonome
 
+## Accessibilité
+
+WCAG 2.1 AA. Focus visible : contour 2px `--ink-strong`, offset 3px. Toute animation
+coupée sous `prefers-reduced-motion`. Langue `fr-CA`. Le passage des libellés du
+taupe `#A59D95` (2.2:1) au neutre `#6B6866` (5.4:1) fait gagner le système en
+lisibilité au passage de la v1.0 à la v2.0.
+
 ---
 
-*Extrait de la papeterie VF Immobilier (avril 2026) par V pour Design. Format :
-[DESIGN.md](https://stitch.withgoogle.com/docs/design-md/overview/). Source de
-vérité du design — toute page ou visuel VF se génère à partir de ce fichier.*
+*Extrait de la papeterie finale VF Immobilier (août 2026) par V pour Design.
+Source de vérité du design — toute page ou visuel VF se génère à partir de ce fichier.*
