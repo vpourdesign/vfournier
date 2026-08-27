@@ -9,7 +9,8 @@
 
 ```
 DESIGN.md      design system (tokens, typo, composants, interdits)
-index.html     la landing page complète, autonome, sans build, sans CDN
+index.html     la landing page complète, autonome, sans build
+merci.html     page de confirmation après envoi du formulaire (/merci)
 assets/        logos, portraits, bannière RLP (+ version crème pour les champs noirs), OG image, polices woff2, icônes SVG
                vanessa-1400/900      veston pâle, détouré (hero, crème)
                vanessa-robe-*        robe noire détourée depuis _O2A9447-blanc.jpg (Approche, crème)
@@ -69,15 +70,34 @@ Règle canadienne (composition semestrielle), fréquences mensuel / 2 semaines /
 prime d'assurance prêt (4,00 % / 3,10 % / 2,80 % selon la mise de fonds), mise de fonds minimale (5 % / 10 % / 20 %),
 plafond 25 ans sous 20 % de mise de fonds. Estimation seulement, avertissement affiché.
 
+## Déploiement — Netlify
+
+`netlify.toml` est à la **racine du dépôt** et publie le dossier `landing`. Aucun build.
+
+Pour brancher le site : sur Netlify, *Add new site → Import an existing project → GitHub →
+`vpourdesign/vfournier`*. Les réglages sont lus depuis `netlify.toml`, il n'y a rien à saisir
+(build command vide, publish directory `landing`). Chaque `git push` sur `main` redéploie.
+
+Le `netlify.toml` pose aussi les en-têtes de sécurité et un cache long sur les polices et images.
+
+**Domaine.** `vfimmobilier.com` pointe aujourd'hui sur un WordPress + Elementor hébergé ailleurs
+(LiteSpeed, 82.25.87.203). Ne pas rediriger le domaine racine sans décision : commencer par
+l'URL `*.netlify.app`, puis un sous-domaine (`landing.vfimmobilier.com`) une fois la page validée.
+
 ## Formulaire
 
-Compatible **Netlify Forms** tel quel (`data-netlify`, honeypot `entreprise`, `action="/merci"`).
+**Netlify Forms** fonctionne tel quel : `data-netlify="true"`, champ caché `form-name="evaluation"`,
+honeypot `entreprise`, `action="/merci"` → `merci.html`. Netlify détecte le formulaire au déploiement ;
+les soumissions arrivent dans *Site configuration → Forms*. Penser à y ajouter une **notification
+courriel** vers info@vfimmobilier.com, sinon personne n'est averti.
+
 Sur un autre hébergeur : remplacer `action` par un endpoint (Formspree, Basin…). Si l'envoi échoue
-(ex. ouverture locale), repli automatique sur un `mailto:` pré-rempli. Case de consentement obligatoire.
+(ex. ouverture locale par double-clic), repli automatique sur un `mailto:` pré-rempli.
+Case de consentement obligatoire.
 
 ## Ce qui reste à faire
 
-1. Créer la page `/merci` (ou changer `action`) selon l'hébergeur.
+1. Activer la notification courriel des soumissions dans Netlify (sinon les leads dorment).
 2. Logo Royal LePage Commercial : placeholder en pointillé dans le pied de page.
 3. Valider avec Vanessa : territoires listés, chiffres (10 ans BDC, 24 h, 48 h), textes de FAQ.
 5. **Polices** : Gotham (pancartes) et Garet / Boston Angel / Cormorant SC (carte) sont sous licence.

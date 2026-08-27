@@ -1,0 +1,31 @@
+# VF Immobilier — déploiement Netlify
+# Site statique, aucun build : Netlify publie le dossier `landing` tel quel.
+
+[build]
+  publish = "landing"
+  command = ""
+
+[build.processing]
+  skip_processing = false
+
+# Le formulaire « evaluation » est détecté automatiquement dans landing/index.html
+# (attributs data-netlify + champ caché form-name). Rien à configurer ici.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+
+# Polices et images auto-hébergées : jamais modifiées, cache long
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
