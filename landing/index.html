@@ -461,7 +461,6 @@ select.input{background-image:none; padding-right:36px}
 .faq .a p:last-child{margin-bottom:0}
 
 /* ---------- contact ---------- */
-.contact__grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(32px,6vw,96px)}
 .dl{margin:0; border-top:1px solid var(--hairline)}
 .dl div{display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid var(--hairline)}
 .dl dt{font-family:var(--ff-display); font-size:10.5px; font-weight:500; text-transform:uppercase; letter-spacing:.22em; color:var(--ink-muted); flex:none}
@@ -469,7 +468,6 @@ select.input{background-image:none; padding-right:36px}
 .dl dd a{text-decoration:none; border-bottom:1px solid var(--hairline-strong); padding-bottom:2px; transition:border-color .3s var(--ease)}
 .dl dd a:hover{border-color:var(--ink-strong)}
 .dl dd address{font-style:normal; font-size:16px; line-height:1.5}
-@media (max-width:860px){ .contact__grid{grid-template-columns:1fr} }
 
 /* ---------- footer ---------- */
 .site-foot{padding-block:clamp(48px,6vw,80px) 0; overflow:hidden}
@@ -534,7 +532,7 @@ select.input{background-image:none; padding-right:36px}
       <li><a href="#calculatrice" style="--d:170ms"><em>03</em><span>Calculatrice</span></a></li>
       <li><a href="#processus" style="--d:225ms"><em>04</em><span>Processus</span></a></li>
       <li><a href="#faq" style="--d:280ms"><em>05</em><span>Questions</span></a></li>
-      <li><a href="#contact" style="--d:335ms"><em>06</em><span>Contact</span></a></li>
+      <li><a href="#evaluation" style="--d:335ms"><em>06</em><span>Contact</span></a></li>
   </ul>
   <div class="menu__foot">
     <a class="btn btn--primary" href="#evaluation">Obtenir une évaluation</a>
@@ -694,7 +692,7 @@ select.input{background-image:none; padding-right:36px}
       </div>
     </div>
 
-    <p class="areas__note rv">Votre secteur n’est pas dans la liste&nbsp;? <a href="#contact">Contactez-moi</a> pour discuter de votre projet.</p>
+    <p class="areas__note rv">Votre secteur n’est pas dans la liste&nbsp;? <a href="#evaluation">Contactez-moi</a> pour discuter de votre projet.</p>
   </div>
 </section>
 
@@ -818,6 +816,8 @@ select.input{background-image:none; padding-right:36px}
       <dl class="dl rv">
         <div><dt>Téléphone</dt><dd><a href="tel:+15148165798">514 816-5798</a></dd></div>
         <div><dt>Courriel</dt><dd><a href="mailto:info@vfimmobilier.com">info@vfimmobilier.com</a></dd></div>
+        <div><dt>Agence</dt><dd><address>Royal LePage St-Donat<br>416, rue Principale<br>Saint-Donat-de-Montcalm (Québec) J0T 2C0</address></dd></div>
+        <div><dt>Propriétés à vendre</dt><dd><a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" target="_blank" rel="noopener">Voir les inscriptions</a></dd></div>
       </dl>
     </div>
 
@@ -926,28 +926,6 @@ select.input{background-image:none; padding-right:36px}
           accompagnement personnalisé à chacun de mes clients.</p></div>
         </details>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section id="contact" style="padding-top:clamp(72px,8vw,120px)">
-  <div class="wrap contact__grid">
-    <div>
-      <p class="eyebrow rv">Contact</p>
-      <h2 class="rv">Un projet immobilier<br>en tête&nbsp;?<br><b>Commençons par en discuter.</b></h2>
-      <p class="lede rv" style="margin-top:28px">Résidentiel, commercial ou industriel, chaque projet commence par une
-      bonne compréhension de vos objectifs.</p>
-      <div class="btn-row rv"><a class="btn btn--primary" href="#evaluation">Me contacter&nbsp;&rarr;</a></div>
-    </div>
-    <div class="rv">
-      <dl class="dl">
-        <div><dt>Téléphone</dt><dd><a href="tel:+15148165798">514 816-5798</a></dd></div>
-        <div><dt>Courriel</dt><dd><a href="mailto:info@vfimmobilier.com">info@vfimmobilier.com</a></dd></div>
-        <div><dt>Agence</dt><dd><address>Royal LePage St-Donat<br>416, rue Principale<br>Saint-Donat-de-Montcalm (Québec) J0T 2C0</address></dd></div>
-        <div><dt>Propriétés à vendre</dt><dd><a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" target="_blank" rel="noopener">Voir les inscriptions</a></dd></div>
-        <div><dt>Profil d'agence</dt><dd><a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" rel="noopener">royallepageurbain.ca</a></dd></div>
-      </dl>
     </div>
   </div>
 </section>

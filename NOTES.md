@@ -34,6 +34,7 @@
 
 ## ✓ Fait
 
+- [2026-09-10] Suppression de la section contact crème, redondante avec la section évaluation noire. L'adresse de l'agence et le lien vers les inscriptions ont été repris dans la section noire ; les liens « Contact » du menu et « Contactez-moi » des territoires pointent maintenant vers #evaluation.
 - [2026-09-10] Menu hamburger mobile (jusqu'à 980 px) : panneau noir plein écran, six entrées numérotées, bouton d'évaluation, téléphone, courriel et réseaux sociaux. Correction au passage d'un décalage de mise en page de 400 px causé par la photo de la section approche qui ne réservait pas sa place.
 - [2026-09-10] Photo de bâtisse commerciale intégrée en débord dans la section évaluation (à la place de la 3e photo de Vanessa), photo résidentielle seule dans la section « Des projets qui créent de la valeur ». Passe SEO : title et meta description raccourcis et géolocalisés, complément de H1 pour les moteurs, alt des photos, robots.txt et sitemap.xml. JSON-LD schema.org complet (RealEstateAgent, Person, Services, ImageObject, WebSite, WebPage, FAQPage) pour le référencement local et génératif.
 - [2026-09-10] Header en beige foncé (plus de bascule en noir), textes agrandis (cartes services, territoires, FAQ, processus), dégagement ajouté avant la section contact, et signature « Stratégie web + logo V pour Design » ajoutée au pied de page, comme sur daynak.ca.
