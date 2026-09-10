@@ -406,10 +406,10 @@ select.input{background-image:none; padding-right:36px}
 
 /* ---------- process ---------- */
 .steps{counter-reset:s; margin-top:64px; border-top:1px solid var(--hairline)}
-.step{counter-increment:s; display:grid; grid-template-columns:96px minmax(0,1fr) minmax(0,1.3fr); gap:clamp(16px,3vw,48px); align-items:start; padding:clamp(28px,3.4vw,44px) 0; border-bottom:1px solid var(--hairline)}
-.step::before{content:"0" counter(s); font-family:var(--ff-display); font-weight:800; font-size:clamp(22px,2.4vw,32px); line-height:1; letter-spacing:-.03em; color:var(--hairline-strong)}
+.step{counter-increment:s; display:grid; grid-template-columns:44px minmax(0,1fr) minmax(0,1.3fr); gap:clamp(16px,3vw,48px); align-items:start; padding:clamp(28px,3.4vw,44px) 0; border-bottom:1px solid var(--hairline)}
+.step::before{content:counter(s); font-family:var(--ff-display); font-weight:800; font-size:clamp(22px,2.4vw,32px); line-height:1; letter-spacing:-.03em; color:var(--hairline-strong)}
 .step p{font-size:17px; line-height:1.65; color:var(--ink-muted); margin:0}
-@media (max-width:860px){ .step{grid-template-columns:64px 1fr} .step p{grid-column:2} }
+@media (max-width:860px){ .step{grid-template-columns:34px 1fr} .step p{grid-column:2} }
 
 /* ---------- évaluation (champ noir) + formulaire ---------- */
 .cta{background:var(--canvas); color:var(--ink)}
@@ -527,12 +527,12 @@ select.input{background-image:none; padding-right:36px}
 
 <nav class="menu" id="menu" aria-label="Menu mobile" hidden>
   <ul class="menu__list">
-      <li><a href="#services" style="--d:60ms"><em>01</em><span>Services</span></a></li>
-      <li><a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" target="_blank" rel="noopener" style="--d:115ms"><em>02</em><span>Propriétés à vendre</span></a></li>
-      <li><a href="#calculatrice" style="--d:170ms"><em>03</em><span>Calculatrice</span></a></li>
-      <li><a href="#processus" style="--d:225ms"><em>04</em><span>Processus</span></a></li>
-      <li><a href="#faq" style="--d:280ms"><em>05</em><span>Questions</span></a></li>
-      <li><a href="#evaluation" style="--d:335ms"><em>06</em><span>Contact</span></a></li>
+      <li><a href="#services" style="--d:60ms"><em>1</em><span>Services</span></a></li>
+      <li><a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" target="_blank" rel="noopener" style="--d:115ms"><em>2</em><span>Propriétés à vendre</span></a></li>
+      <li><a href="#calculatrice" style="--d:170ms"><em>3</em><span>Calculatrice</span></a></li>
+      <li><a href="#processus" style="--d:225ms"><em>4</em><span>Processus</span></a></li>
+      <li><a href="#faq" style="--d:280ms"><em>5</em><span>Questions</span></a></li>
+      <li><a href="#evaluation" style="--d:335ms"><em>6</em><span>Contact</span></a></li>
   </ul>
   <div class="menu__foot">
     <a class="btn btn--primary" href="#evaluation">Obtenir une évaluation</a>
