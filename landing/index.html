@@ -3,18 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vanessa Fournier, courtier immobilier commercial et résidentiel à Montréal | Royal LePage Urbain</title>
-<meta name="description" content="Vanessa Fournier, courtier immobilier chez Royal LePage Urbain. Commercial, industriel et résidentiel dans le Grand Montréal et les Laurentides. Évaluation gratuite sous 48 heures, calculatrice hypothécaire, réponse en 24 heures. 514 816-5798.">
+<title>Courtier immobilier commercial et résidentiel · Rive-Nord et Laurentides</title>
+<meta name="description" content="Vanessa Fournier, courtier immobilier commercial et résidentiel sur la Rive-Nord, à Laval, dans les Laurentides et Lanaudière. Évaluation gratuite sous 48 heures.">
 <link rel="canonical" href="https://vfimmobilier.com/">
+<link rel="alternate" hreflang="fr-ca" href="https://vfimmobilier.com/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
-<meta name="author" content="Vanessa Fournier inc.">
+<meta name="author" content="Vanessa Fournier">
 <meta name="geo.region" content="CA-QC">
-<meta name="geo.placename" content="Montréal">
+<meta name="geo.placename" content="Rive-Nord, Laval, Laurentides, Lanaudière">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="VF Immobilier">
-<meta property="og:title" content="Vanessa Fournier, courtier immobilier commercial et résidentiel | Royal LePage Urbain">
-<meta property="og:description" content="Investir. Acheter. Vendre. Avec stratégie. Commercial, industriel et résidentiel dans le Grand Montréal. Évaluation gratuite sous 48 heures.">
+<meta property="og:title" content="Vanessa Fournier, courtier immobilier commercial et résidentiel">
+<meta property="og:description" content="Acheter. Vendre. Investir. Avec stratégie. Commercial, industriel et résidentiel sur la Rive-Nord, à Laval, dans les Laurentides et Lanaudière. Évaluation gratuite sous 48 heures.">
 <meta property="og:url" content="https://vfimmobilier.com/">
 <meta property="og:image" content="https://vfimmobilier.com/assets/og-vf-immobilier.jpg">
 <meta property="og:image:width" content="1200">
@@ -22,7 +24,7 @@
 <meta property="og:image:alt" content="Vanessa Fournier, courtier immobilier, VF Immobilier">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vanessa Fournier, courtier immobilier commercial et résidentiel">
-<meta name="twitter:description" content="Commercial, industriel et résidentiel dans le Grand Montréal. Évaluation gratuite sous 48 heures.">
+<meta name="twitter:description" content="Commercial, industriel et résidentiel sur la Rive-Nord, à Laval, dans les Laurentides et Lanaudière. Évaluation gratuite sous 48 heures.">
 <meta name="twitter:image" content="https://vfimmobilier.com/assets/og-vf-immobilier.jpg">
 <meta name="theme-color" content="#F1EFEC">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -77,6 +79,7 @@
   --ff-body:'Inter','Helvetica Neue',system-ui,sans-serif;
 
   --gutter:clamp(24px,5vw,80px);
+  --edge:max(0px,(100vw - 1280px) / 2);   /* marge hors conteneur, pour les images en débord */
   --section-y:clamp(88px,11vw,176px);
   --max:1280px;
   --ease:cubic-bezier(.22,1,.36,1);
@@ -170,31 +173,30 @@ strong{font-weight:500}
   position:fixed; inset:0 0 auto 0; z-index:50;
   display:flex; align-items:center; justify-content:space-between; gap:24px;
   padding:18px var(--gutter);
-  background:color-mix(in srgb,var(--canvas) 88%,transparent);
-  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  background:#E7E4DF; color:#312F30;
   border-bottom:1px solid transparent;
   transition:border-color .4s var(--ease),padding .4s var(--ease),background .4s var(--ease),color .4s var(--ease);
 }
-.site-head.is-stuck{border-bottom-color:var(--hairline); padding-block:12px}
-.site-head__logo{display:block; width:132px; color:var(--ink-strong); transition:color .4s var(--ease)}
+.site-head.is-stuck{border-bottom-color:#D6D2CD; padding-block:12px}
+.site-head__logo{display:block; width:176px; color:#000; transition:color .4s var(--ease)}
 .site-head__logo svg{width:100%; height:auto; display:block}
-.site-head[data-theme="dark"] .site-head__logo{color:var(--ink-strong)}
 .nav{display:flex; align-items:center; gap:34px}
 .nav a{
   font-family:var(--ff-display); font-size:11px; font-weight:500; text-transform:uppercase;
-  letter-spacing:.20em; text-decoration:none; color:var(--ink); position:relative; padding-block:6px;
+  letter-spacing:.20em; text-decoration:none; color:#312F30; position:relative; padding-block:6px;
 }
-.nav a::after{content:""; position:absolute; left:0; right:100%; bottom:0; height:1px; background:var(--ink-strong); transition:right .4s var(--ease)}
+.nav a::after{content:""; position:absolute; left:0; right:100%; bottom:0; height:1px; background:#000; transition:right .4s var(--ease)}
 .nav a:hover::after{right:0}
 .nav .btn{min-height:44px; padding:12px 26px}
 .nav .btn::after{display:none}
 .nav .btn{white-space:nowrap}
-.nav a.btn--primary{color:var(--surface-1)}
-.site-head[data-theme="dark"] .nav a.btn--primary{background:var(--inverse-canvas); color:var(--inverse-ink)}
-.site-head[data-theme="dark"] .nav a.btn--primary:hover{background:var(--ink-muted)}
+.nav a.btn--primary{background:#000; color:#F1EFEC}
+.nav a.btn--primary:hover{background:#312F30}
+.nav__mail{text-transform:none !important; letter-spacing:.02em !important; font-family:var(--ff-body) !important; font-size:14px !important; font-weight:300 !important}
 .nav .sm{display:none}
 @media (max-width:560px){ .nav .lg{display:none} .nav .sm{display:inline} .nav .btn{padding:12px 20px} }
 @media (max-width:980px){ .nav a:not(.btn){display:none} }
+@media (max-width:1180px){ .nav__mail{display:none} }
 
 /* ---------- hero — la composition de la pancarte résidentielle ---------- */
 .hero{padding-top:clamp(132px,15vw,180px); padding-bottom:0; overflow:hidden}
@@ -261,6 +263,7 @@ strong{font-weight:500}
 .about__photo img{width:min(100%,520px); height:auto}
 .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,3vw,40px); margin-top:56px; padding-top:40px; border-top:1px solid var(--hairline)}
 .stat__n{font-family:var(--ff-display); font-weight:800; font-size:clamp(28px,3vw,42px); line-height:1; letter-spacing:-.03em; color:var(--ink-strong)}
+.stat__n--sm{font-size:clamp(24px,2.3vw,33px)}
 .stat__l{font-family:var(--ff-display); font-size:10.5px; font-weight:500; text-transform:uppercase; letter-spacing:.22em; color:var(--ink-muted); margin-top:14px; line-height:1.5}
 @media (max-width:860px){ .about__grid{grid-template-columns:1fr} .about .about__grid{grid-template-areas:"head" "body" "photo"} .about__photo{margin-top:48px; margin-inline:auto} .about__photo img{width:min(100%,360px)} }
 
@@ -272,17 +275,28 @@ strong{font-weight:500}
 .card__i{width:30px; height:30px; color:var(--ink-strong); margin-bottom:28px}
 .card__i svg{width:100%; height:100%; display:block; fill:none; stroke:currentColor; stroke-width:1.25; stroke-linecap:round; stroke-linejoin:round}
 .card h3{margin-bottom:14px}
-.card p{font-size:16px; color:var(--ink-muted)}
+.card p{font-size:17.5px; line-height:1.65; color:var(--ink-muted)}
 .card ul{list-style:none; margin:24px 0 0; padding:0}
-.card li{font-family:var(--ff-display); font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:.16em; color:var(--ink); padding:12px 0; border-top:1px solid var(--hairline)}
+.card li{font-family:var(--ff-display); font-size:12.5px; font-weight:500; text-transform:uppercase; letter-spacing:.14em; color:var(--ink); padding:13px 0; border-top:1px solid var(--hairline)}
 @media (max-width:900px){ .cards{grid-template-columns:1fr} }
 
 /* ---------- secteurs ---------- */
 .areas{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,4vw,64px); margin-top:56px; padding-top:40px; border-top:1px solid var(--hairline)}
-.areas h3{font-family:var(--ff-display); font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:.28em; color:var(--ink-muted); margin-bottom:16px}
+.areas h3{font-family:var(--ff-display); font-size:12.5px; font-weight:500; text-transform:uppercase; letter-spacing:.24em; color:var(--ink-muted); margin-bottom:18px}
 .areas ul{list-style:none; margin:0; padding:0}
-.areas li{padding:9px 0; border-bottom:1px solid var(--hairline); font-size:16px; color:var(--ink)}
+.areas li{padding:10px 0; border-bottom:1px solid var(--hairline); font-size:17.5px; color:var(--ink)}
 @media (max-width:860px){ .areas{grid-template-columns:1fr} }
+.areas__note{margin-top:32px; font-size:16.5px; color:var(--ink-muted)}
+.areas__note a{text-decoration:none; border-bottom:1px solid var(--hairline-strong); padding-bottom:2px; transition:border-color .3s var(--ease)}
+.areas__note a:hover{border-color:var(--ink-strong)}
+
+/* ---------- photos de propriétés ---------- */
+.shots{background:var(--canvas); padding-top:0}
+.shots__grid{display:grid; grid-template-columns:1fr; gap:clamp(16px,2.4vw,32px); margin-top:clamp(40px,4vw,56px); max-width:1092px}
+.shot{margin:0}
+.shot img{width:100%; height:auto}
+.shot figcaption{margin-top:18px; font-family:var(--ff-display); font-size:11.5px; font-weight:500; text-transform:uppercase; letter-spacing:.22em; color:var(--ink-muted); line-height:1.6}
+
 
 /* ---------- calculatrice ---------- */
 .calc__grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:clamp(32px,6vw,96px); align-items:start}
@@ -336,7 +350,7 @@ select.input{background-image:none; padding-right:36px}
 .steps{counter-reset:s; margin-top:64px; border-top:1px solid var(--hairline)}
 .step{counter-increment:s; display:grid; grid-template-columns:96px minmax(0,1fr) minmax(0,1.3fr); gap:clamp(16px,3vw,48px); align-items:start; padding:clamp(28px,3.4vw,44px) 0; border-bottom:1px solid var(--hairline)}
 .step::before{content:"0" counter(s); font-family:var(--ff-display); font-weight:800; font-size:clamp(22px,2.4vw,32px); line-height:1; letter-spacing:-.03em; color:var(--hairline-strong)}
-.step p{font-size:16px; color:var(--ink-muted); margin:0}
+.step p{font-size:17px; line-height:1.65; color:var(--ink-muted); margin:0}
 @media (max-width:860px){ .step{grid-template-columns:64px 1fr} .step p{grid-column:2} }
 
 /* ---------- évaluation (champ noir) + formulaire ---------- */
@@ -344,8 +358,8 @@ select.input{background-image:none; padding-right:36px}
 .cta__grid{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); grid-template-areas:"copy form" "photo form"; column-gap:clamp(32px,6vw,96px); row-gap:0; align-items:start}
 .cta__copy{grid-area:copy}
 .cta .form{grid-area:form}
-.cta__photo{grid-area:photo; align-self:end; margin-top:clamp(32px,4vw,56px); margin-bottom:calc(-1 * var(--section-y)); line-height:0}
-.cta__photo img{width:min(100%,560px); height:auto}
+.cta__photo{grid-area:photo; align-self:end; margin-top:clamp(40px,5vw,72px); margin-bottom:calc(-1 * var(--section-y)); margin-inline-start:calc(-1 * (var(--gutter) + var(--edge))); line-height:0}
+.cta__photo img{width:100%; max-width:none; height:auto}
 .cta h2{max-width:18ch}
 .cta .lede{color:var(--ink-muted); margin-top:28px}
 .cta .dl{margin-top:40px}
@@ -364,7 +378,7 @@ select.input{background-image:none; padding-right:36px}
 .form.is-sent .form__ok{display:block}
 .form.is-sent .form__fields{display:none}
 .hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
-@media (max-width:900px){ .cta__grid{grid-template-columns:1fr; grid-template-areas:"copy" "form" "photo"} .cta .form{margin-top:48px} .cta__photo{margin-top:48px; margin-inline:auto} .cta__photo img{width:min(100%,360px)} }
+@media (max-width:900px){ .cta__grid{grid-template-columns:1fr; grid-template-areas:"copy" "form" "photo"} .cta .form{margin-top:48px} .cta__photo{margin-top:48px; margin-inline:calc(-1 * var(--gutter))} .cta__photo img{width:100%} }
 
 /* ---------- faq ---------- */
 .faq{margin-top:56px; border-top:1px solid var(--hairline)}
@@ -378,7 +392,7 @@ select.input{background-image:none; padding-right:36px}
 .faq summary:hover{color:var(--ink-muted)}
 .faq summary::after{content:""; width:12px; height:12px; justify-self:end; border-right:1.25px solid var(--ink); border-bottom:1.25px solid var(--ink); transform:rotate(45deg) translate(-3px,-3px); transition:transform .4s var(--ease)}
 .faq details[open] summary::after{transform:rotate(225deg) translate(-2px,-2px)}
-.faq .a{padding:0 0 clamp(20px,2.4vw,28px); max-width:62ch; color:var(--ink-muted); font-size:16px}
+.faq .a{padding:0 0 clamp(20px,2.4vw,28px); max-width:62ch; color:var(--ink-muted); font-size:17px; line-height:1.7}
 .faq .a p:last-child{margin-bottom:0}
 
 /* ---------- contact ---------- */
@@ -400,9 +414,18 @@ select.input{background-image:none; padding-right:36px}
 .brokerage img{height:86px; width:auto}
 .brokerage__sep{width:1px; align-self:stretch; background:var(--hairline-strong)}
 .brokerage__pending{font-family:var(--ff-display); font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:.16em; color:var(--ink-muted); border:1px dashed var(--hairline-strong); padding:14px 18px; max-width:190px; line-height:1.7}
+.social{display:flex; gap:12px; list-style:none; margin:40px 0 0; padding:0}
+.social a{display:flex; align-items:center; justify-content:center; width:46px; height:46px; border:1px solid var(--hairline-strong); color:var(--ink-strong); transition:background var(--dur-hover) var(--ease),color var(--dur-hover) var(--ease),border-color var(--dur-hover) var(--ease)}
+.social a:hover{background:var(--ink-strong); border-color:var(--ink-strong); color:var(--canvas)}
+.social svg{width:17px; height:17px; display:block; fill:currentColor}
 .foot__legal{display:flex; flex-wrap:wrap; gap:8px 28px; margin:44px 0 clamp(48px,6vw,80px); padding-top:28px; border-top:1px solid var(--hairline); font-size:13px; color:var(--ink-muted)}
 .foot__legal a{text-decoration:none; border-bottom:1px solid transparent}
 .foot__legal a:hover{border-bottom-color:var(--ink-muted)}
+.foot__credit{display:flex; align-items:center; justify-content:center; gap:14px; margin-top:calc(-1 * clamp(28px,3.5vw,48px)); padding:22px 0 clamp(32px,4vw,52px)}
+.foot__credit span{font-family:var(--ff-display); font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:.24em; color:var(--ink-muted)}
+.foot__credit a{display:block; line-height:0; opacity:.62; transition:opacity var(--dur-hover) var(--ease)}
+.foot__credit a:hover{opacity:1}
+.foot__credit img{width:auto; height:46px}
 
 /* ---------- reveal (IntersectionObserver, sans dépendance) ---------- */
 .rv{opacity:0; transform:translateY(24px); transition:opacity .9s var(--ease),transform .9s var(--ease); transition-delay:var(--d,0ms)}
@@ -423,14 +446,15 @@ select.input{background-image:none; padding-right:36px}
 
 <header class="site-head" id="head">
   <a class="site-head__logo" href="#top" aria-label="VF Immobilier, accueil">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 464" role="img" aria-label="VF Immobilier" width="132" height="62"><g fill="currentColor"><path transform="translate(301.600 310.000) scale(0.320000 -0.320000)" d="M651 708V688Q631 683 608.5 661.0Q586 639 567 590L340 -4H307L59 624Q44 661 26.0 674.0Q8 687 -8 688V708Q15 707 48.5 706.0Q82 705 114 705Q155 705 191.5 706.0Q228 707 250 708V688Q217 687 199.0 680.0Q181 673 179.5 655.5Q178 638 191 604L371 135L520 527Q543 588 543.0 622.5Q543 657 521.0 672.0Q499 687 457 688V708Q488 707 518.0 706.0Q548 705 575 705Q600 705 618.0 706.0Q636 707 651 708Z"/><path transform="translate(513.760 310.000) scale(0.320000 -0.320000)" d="M550 708Q546 668 544.5 630.0Q543 592 543 572Q543 549 544.0 528.0Q545 507 546 492H523Q514 565 498.5 606.5Q483 648 452.0 666.5Q421 685 363 685H310Q278 685 261.5 679.5Q245 674 239.0 657.5Q233 641 233 606V358H294Q326 358 344.5 371.0Q363 384 373.0 405.0Q383 426 387.5 448.5Q392 471 395 490H418Q414 433 414.5 403.0Q415 373 415.0 348.0Q415 323 416.0 293.0Q417 263 421 206H398Q394 239 386.0 269.5Q378 300 357.0 319.0Q336 338 294 338H233V108Q233 71 241.0 52.5Q249 34 271.0 28.0Q293 22 336 21V0Q309 2 266.0 2.5Q223 3 177 3Q137 3 100.5 2.5Q64 2 39 0V20Q73 22 90.0 28.0Q107 34 112.5 52.0Q118 70 118 106V602Q118 639 112.5 656.5Q107 674 89.5 680.5Q72 687 39 688V708Q78 707 120.5 706.5Q163 706 204.5 705.5Q246 705 282 705H341Q387 705 445.5 705.5Q504 706 550 708Z"/><path transform="translate(189.443 434.000) scale(0.078000 -0.078000)" d="M80 700V0H165V700Z"/><path transform="translate(231.953 434.000) scale(0.078000 -0.078000)" d="M177 473 405 65 633 473 685 0H770L685 735L405 228L125 735L40 0H125Z"/><path transform="translate(318.533 434.000) scale(0.078000 -0.078000)" d="M177 473 405 65 633 473 685 0H770L685 735L405 228L125 735L40 0H125Z"/><path transform="translate(405.113 434.000) scale(0.078000 -0.078000)" d="M130 350Q130 429 164.5 491.0Q199 553 259.0 589.0Q319 625 395 625Q472 625 531.5 589.0Q591 553 625.5 491.0Q660 429 660 350Q660 271 625.5 209.0Q591 147 531.5 111.0Q472 75 395 75Q319 75 259.0 111.0Q199 147 164.5 209.0Q130 271 130 350ZM40 350Q40 274 66.5 208.0Q93 142 141.0 93.5Q189 45 254.0 17.5Q319 -10 395 -10Q472 -10 536.5 17.5Q601 45 649.0 93.5Q697 142 723.5 208.0Q750 274 750 350Q750 427 723.5 492.5Q697 558 649.0 606.5Q601 655 536.5 682.5Q472 710 395 710Q319 710 254.0 682.5Q189 655 141.0 606.5Q93 558 66.5 492.5Q40 427 40 350Z"/><path transform="translate(490.133 434.000) scale(0.078000 -0.078000)" d="M352 382Q361 385 370 388Q416 406 442.0 441.0Q468 476 468 525Q468 585 442.0 623.5Q416 662 369.5 681.0Q323 700 260 700H80V0H270Q338 0 391.5 22.5Q445 45 476.5 90.5Q508 136 508 205Q508 253 490.0 288.0Q472 323 439.5 345.5Q407 368 364 379Q358 381 352 382ZM165 343H270Q304 343 332.0 334.5Q360 326 380.5 309.0Q401 292 412.0 267.0Q423 242 423 210Q423 167 403.5 137.0Q384 107 349.5 91.0Q315 75 270 75H165ZM165 417V625H260Q313 625 348.0 597.5Q383 570 383 520Q383 487 367.0 464.0Q351 441 323.0 429.0Q295 417 260 417Z"/><path transform="translate(557.057 434.000) scale(0.078000 -0.078000)" d="M80 700V0H165V700Z"/><path transform="translate(599.567 434.000) scale(0.078000 -0.078000)" d="M80 700V0H440V80H165V700Z"/><path transform="translate(658.067 434.000) scale(0.078000 -0.078000)" d="M80 700V0H165V700Z"/><path transform="translate(700.577 434.000) scale(0.078000 -0.078000)" d="M80 700V0H480V80H165V340H460V420H165V620H480V700Z"/><path transform="translate(766.877 434.000) scale(0.078000 -0.078000)" d="M80 700V0H165V280H250L445 0H550L341 288Q368 294 392 306Q445 331 476.5 378.5Q508 426 508 490Q508 555 476.5 602.0Q445 649 391.5 674.5Q338 700 270 700ZM165 355V625H270Q315 625 349.5 609.0Q384 593 403.5 563.0Q423 533 423.0 490.0Q423 447 403.5 417.0Q384 387 349.5 371.0Q315 355 270 355Z"/></g><g fill="currentColor"><rect x="15.44" y="408.26" width="140.00" height="6"/><rect x="844.56" y="408.26" width="140.00" height="6"/></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1161 550" width="176" height="83" role="img" aria-label="VF Immobilier — commercial, industriel, résidentiel"><g fill="currentColor"><path transform="translate(394.474 300.000) scale(0.300000 -0.300000)" d="M651 708V688Q631 683 608.5 661.0Q586 639 567 590L340 -4H307L59 624Q44 661 26.0 674.0Q8 687 -8 688V708Q15 707 48.5 706.0Q82 705 114 705Q155 705 191.5 706.0Q228 707 250 708V688Q217 687 199.0 680.0Q181 673 179.5 655.5Q178 638 191 604L371 135L520 527Q543 588 543.0 622.5Q543 657 521.0 672.0Q499 687 457 688V708Q488 707 518.0 706.0Q548 705 575 705Q600 705 618.0 706.0Q636 707 651 708Z"/><path transform="translate(593.374 300.000) scale(0.300000 -0.300000)" d="M550 708Q546 668 544.5 630.0Q543 592 543 572Q543 549 544.0 528.0Q545 507 546 492H523Q514 565 498.5 606.5Q483 648 452.0 666.5Q421 685 363 685H310Q278 685 261.5 679.5Q245 674 239.0 657.5Q233 641 233 606V358H294Q326 358 344.5 371.0Q363 384 373.0 405.0Q383 426 387.5 448.5Q392 471 395 490H418Q414 433 414.5 403.0Q415 373 415.0 348.0Q415 323 416.0 293.0Q417 263 421 206H398Q394 239 386.0 269.5Q378 300 357.0 319.0Q336 338 294 338H233V108Q233 71 241.0 52.5Q249 34 271.0 28.0Q293 22 336 21V0Q309 2 266.0 2.5Q223 3 177 3Q137 3 100.5 2.5Q64 2 39 0V20Q73 22 90.0 28.0Q107 34 112.5 52.0Q118 70 118 106V602Q118 639 112.5 656.5Q107 674 89.5 680.5Q72 687 39 688V708Q78 707 120.5 706.5Q163 706 204.5 705.5Q246 705 282 705H341Q387 705 445.5 705.5Q504 706 550 708Z"/><path transform="translate(285.843 418.000) scale(0.074000 -0.074000)" d="M80 700V0H165V700Z"/><path transform="translate(326.173 418.000) scale(0.074000 -0.074000)" d="M177 473 405 65 633 473 685 0H770L685 735L405 228L125 735L40 0H125Z"/><path transform="translate(408.313 418.000) scale(0.074000 -0.074000)" d="M177 473 405 65 633 473 685 0H770L685 735L405 228L125 735L40 0H125Z"/><path transform="translate(490.453 418.000) scale(0.074000 -0.074000)" d="M130 350Q130 429 164.5 491.0Q199 553 259.0 589.0Q319 625 395 625Q472 625 531.5 589.0Q591 553 625.5 491.0Q660 429 660 350Q660 271 625.5 209.0Q591 147 531.5 111.0Q472 75 395 75Q319 75 259.0 111.0Q199 147 164.5 209.0Q130 271 130 350ZM40 350Q40 274 66.5 208.0Q93 142 141.0 93.5Q189 45 254.0 17.5Q319 -10 395 -10Q472 -10 536.5 17.5Q601 45 649.0 93.5Q697 142 723.5 208.0Q750 274 750 350Q750 427 723.5 492.5Q697 558 649.0 606.5Q601 655 536.5 682.5Q472 710 395 710Q319 710 254.0 682.5Q189 655 141.0 606.5Q93 558 66.5 492.5Q40 427 40 350Z"/><path transform="translate(571.113 418.000) scale(0.074000 -0.074000)" d="M352 382Q361 385 370 388Q416 406 442.0 441.0Q468 476 468 525Q468 585 442.0 623.5Q416 662 369.5 681.0Q323 700 260 700H80V0H270Q338 0 391.5 22.5Q445 45 476.5 90.5Q508 136 508 205Q508 253 490.0 288.0Q472 323 439.5 345.5Q407 368 364 379Q358 381 352 382ZM165 343H270Q304 343 332.0 334.5Q360 326 380.5 309.0Q401 292 412.0 267.0Q423 242 423 210Q423 167 403.5 137.0Q384 107 349.5 91.0Q315 75 270 75H165ZM165 417V625H260Q313 625 348.0 597.5Q383 570 383 520Q383 487 367.0 464.0Q351 441 323.0 429.0Q295 417 260 417Z"/><path transform="translate(634.605 418.000) scale(0.074000 -0.074000)" d="M80 700V0H165V700Z"/><path transform="translate(674.935 418.000) scale(0.074000 -0.074000)" d="M80 700V0H440V80H165V700Z"/><path transform="translate(730.435 418.000) scale(0.074000 -0.074000)" d="M80 700V0H165V700Z"/><path transform="translate(770.765 418.000) scale(0.074000 -0.074000)" d="M80 700V0H480V80H165V340H460V420H165V620H480V700Z"/><path transform="translate(833.665 418.000) scale(0.074000 -0.074000)" d="M80 700V0H165V280H250L445 0H550L341 288Q368 294 392 306Q445 331 476.5 378.5Q508 426 508 490Q508 555 476.5 602.0Q445 649 391.5 674.5Q338 700 270 700ZM165 355V625H270Q315 625 349.5 609.0Q384 593 403.5 563.0Q423 533 423.0 490.0Q423 447 403.5 417.0Q384 387 349.5 371.0Q315 355 270 355Z"/></g><g fill="currentColor"><rect x="101.84" y="393.58" width="150.00" height="6" /><rect x="909.11" y="393.58" width="150.00" height="6" /></g><g fill="currentColor"><path transform="translate(40.000 510.000) scale(0.044000 -0.044000)" d="M130 350Q130 432 166.5 493.5Q203 555 262.0 590.0Q321 625 390 625Q440 625 481.5 612.0Q523 599 557.0 575.5Q591 552 615 521V633Q571 672 519.0 691.0Q467 710 390 710Q317 710 253.5 683.5Q190 657 142.0 608.5Q94 560 67.0 494.0Q40 428 40 350Q40 272 67.0 206.0Q94 140 142.0 91.5Q190 43 253.5 16.5Q317 -10 390 -10Q467 -10 519.0 9.0Q571 28 615 67V179Q591 148 557.0 124.5Q523 101 481.5 88.0Q440 75 390 75Q321 75 262.0 110.0Q203 145 166.5 207.0Q130 269 130 350Z"/><path transform="translate(77.180 510.000) scale(0.044000 -0.044000)" d="M130 350Q130 429 164.5 491.0Q199 553 259.0 589.0Q319 625 395 625Q472 625 531.5 589.0Q591 553 625.5 491.0Q660 429 660 350Q660 271 625.5 209.0Q591 147 531.5 111.0Q472 75 395 75Q319 75 259.0 111.0Q199 147 164.5 209.0Q130 271 130 350ZM40 350Q40 274 66.5 208.0Q93 142 141.0 93.5Q189 45 254.0 17.5Q319 -10 395 -10Q472 -10 536.5 17.5Q601 45 649.0 93.5Q697 142 723.5 208.0Q750 274 750 350Q750 427 723.5 492.5Q697 558 649.0 606.5Q601 655 536.5 682.5Q472 710 395 710Q319 710 254.0 682.5Q189 655 141.0 606.5Q93 558 66.5 492.5Q40 427 40 350Z"/><path transform="translate(118.980 510.000) scale(0.044000 -0.044000)" d="M177 473 405 65 633 473 685 0H770L685 735L405 228L125 735L40 0H125Z"/><path transform="translate(161.660 510.000) scale(0.044000 -0.044000)" d="M177 473 405 65 633 473 685 0H770L685 735L405 228L125 735L40 0H125Z"/><path transform="translate(204.340 510.000) scale(0.044000 -0.044000)" d="M80 700V0H480V80H165V340H460V420H165V620H480V700Z"/><path transform="translate(235.580 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V280H250L445 0H550L341 288Q368 294 392 306Q445 331 476.5 378.5Q508 426 508 490Q508 555 476.5 602.0Q445 649 391.5 674.5Q338 700 270 700ZM165 355V625H270Q315 625 349.5 609.0Q384 593 403.5 563.0Q423 533 423.0 490.0Q423 447 403.5 417.0Q384 387 349.5 371.0Q315 355 270 355Z"/><path transform="translate(267.260 510.000) scale(0.044000 -0.044000)" d="M130 350Q130 432 166.5 493.5Q203 555 262.0 590.0Q321 625 390 625Q440 625 481.5 612.0Q523 599 557.0 575.5Q591 552 615 521V633Q571 672 519.0 691.0Q467 710 390 710Q317 710 253.5 683.5Q190 657 142.0 608.5Q94 560 67.0 494.0Q40 428 40 350Q40 272 67.0 206.0Q94 140 142.0 91.5Q190 43 253.5 16.5Q317 -10 390 -10Q467 -10 519.0 9.0Q571 28 615 67V179Q591 148 557.0 124.5Q523 101 481.5 88.0Q440 75 390 75Q321 75 262.0 110.0Q203 145 166.5 207.0Q130 269 130 350Z"/><path transform="translate(304.440 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V700Z"/><path transform="translate(322.260 510.000) scale(0.044000 -0.044000)" d="M471 210 560 0H655L330 735L5 0H100L189 210ZM330 542 437 290H223Z"/><path transform="translate(358.340 510.000) scale(0.044000 -0.044000)" d="M80 700V0H440V80H165V700Z"/><path transform="translate(405.420 510.000) scale(0.044000 -0.044000)" d="M95 240Q95 218 111.5 201.5Q128 185 150 185Q173 185 189.0 201.5Q205 218 205 240Q205 263 189.0 279.0Q173 295 150 295Q128 295 111.5 279.0Q95 263 95 240Z"/><path transform="translate(445.900 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V700Z"/><path transform="translate(463.720 510.000) scale(0.044000 -0.044000)" d="M610 700V179L80 735V0H165V521L695 -35V700Z"/><path transform="translate(504.860 510.000) scale(0.044000 -0.044000)" d="M80 700V0H290Q392 0 471.0 44.0Q550 88 595.0 166.5Q640 245 640.0 350.0Q640 455 595.0 533.5Q550 612 471.0 656.0Q392 700 290 700ZM165 85V615H290Q349 615 398.0 596.5Q447 578 482.0 543.5Q517 509 536.0 460.0Q555 411 555.0 350.0Q555 289 536.0 240.0Q517 191 482.0 156.5Q447 122 398.0 103.5Q349 85 290 85Z"/><path transform="translate(541.820 510.000) scale(0.044000 -0.044000)" d="M75 700V230Q75 178 91.5 134.0Q108 90 139.5 58.0Q171 26 215.0 8.0Q259 -10 313 -10Q367 -10 411.0 8.0Q455 26 486.5 58.0Q518 90 534.5 134.0Q551 178 551 230V700H466V230Q466 158 427.0 114.0Q388 70 313 70Q238 70 199.0 114.0Q160 158 160 230V700Z"/><path transform="translate(576.404 510.000) scale(0.044000 -0.044000)" d="M106 212 38 166Q61 120 97.5 79.5Q134 39 182.5 14.5Q231 -10 288 -10Q330 -10 368.5 4.0Q407 18 437.5 44.0Q468 70 485.5 107.0Q503 144 503 190Q503 238 486.0 272.5Q469 307 442.5 331.5Q416 356 385.0 372.0Q354 388 326 398Q265 419 229.5 440.5Q194 462 179.0 486.5Q164 511 164 540Q164 574 190.0 601.5Q216 629 273 629Q314 629 342.5 613.0Q371 597 391.0 572.0Q411 547 424 521L497 563Q480 600 450.0 633.5Q420 667 377.5 688.5Q335 710 278 710Q219 710 173.0 686.5Q127 663 101.0 622.0Q75 581 75 529Q75 481 93.5 448.0Q112 415 141.0 392.5Q170 370 202.0 355.5Q234 341 260 332Q300 318 335.5 300.5Q371 283 393.0 255.0Q415 227 415 180Q415 132 381.0 101.0Q347 70 291 70Q249 70 216.0 88.0Q183 106 156.5 138.0Q130 170 106 212Z"/><path transform="translate(607.556 510.000) scale(0.044000 -0.044000)" d="M10 620H190V0H275V620H455V700H10Z"/><path transform="translate(635.056 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V280H250L445 0H550L341 288Q368 294 392 306Q445 331 476.5 378.5Q508 426 508 490Q508 555 476.5 602.0Q445 649 391.5 674.5Q338 700 270 700ZM165 355V625H270Q315 625 349.5 609.0Q384 593 403.5 563.0Q423 533 423.0 490.0Q423 447 403.5 417.0Q384 387 349.5 371.0Q315 355 270 355Z"/><path transform="translate(666.736 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V700Z"/><path transform="translate(684.556 510.000) scale(0.044000 -0.044000)" d="M80 700V0H480V80H165V340H460V420H165V620H480V700Z"/><path transform="translate(715.796 510.000) scale(0.044000 -0.044000)" d="M80 700V0H440V80H165V700Z"/><path transform="translate(762.876 510.000) scale(0.044000 -0.044000)" d="M95 240Q95 218 111.5 201.5Q128 185 150 185Q173 185 189.0 201.5Q205 218 205 240Q205 263 189.0 279.0Q173 295 150 295Q128 295 111.5 279.0Q95 263 95 240Z"/><path transform="translate(803.356 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V280H250L445 0H550L341 288Q368 294 392 306Q445 331 476.5 378.5Q508 426 508 490Q508 555 476.5 602.0Q445 649 391.5 674.5Q338 700 270 700ZM165 355V625H270Q315 625 349.5 609.0Q384 593 403.5 563.0Q423 533 423.0 490.0Q423 447 403.5 417.0Q384 387 349.5 371.0Q315 355 270 355Z"/><path transform="translate(835.036 510.000) scale(0.044000 -0.044000)" d="M80 700V0H480V80H165V340H460V420H165V620H480V700ZM410 920 335 960 185 800 230 770Z"/><path transform="translate(866.276 510.000) scale(0.044000 -0.044000)" d="M106 212 38 166Q61 120 97.5 79.5Q134 39 182.5 14.5Q231 -10 288 -10Q330 -10 368.5 4.0Q407 18 437.5 44.0Q468 70 485.5 107.0Q503 144 503 190Q503 238 486.0 272.5Q469 307 442.5 331.5Q416 356 385.0 372.0Q354 388 326 398Q265 419 229.5 440.5Q194 462 179.0 486.5Q164 511 164 540Q164 574 190.0 601.5Q216 629 273 629Q314 629 342.5 613.0Q371 597 391.0 572.0Q411 547 424 521L497 563Q480 600 450.0 633.5Q420 667 377.5 688.5Q335 710 278 710Q219 710 173.0 686.5Q127 663 101.0 622.0Q75 581 75 529Q75 481 93.5 448.0Q112 415 141.0 392.5Q170 370 202.0 355.5Q234 341 260 332Q300 318 335.5 300.5Q371 283 393.0 255.0Q415 227 415 180Q415 132 381.0 101.0Q347 70 291 70Q249 70 216.0 88.0Q183 106 156.5 138.0Q130 170 106 212Z"/><path transform="translate(897.428 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V700Z"/><path transform="translate(915.248 510.000) scale(0.044000 -0.044000)" d="M80 700V0H290Q392 0 471.0 44.0Q550 88 595.0 166.5Q640 245 640.0 350.0Q640 455 595.0 533.5Q550 612 471.0 656.0Q392 700 290 700ZM165 85V615H290Q349 615 398.0 596.5Q447 578 482.0 543.5Q517 509 536.0 460.0Q555 411 555.0 350.0Q555 289 536.0 240.0Q517 191 482.0 156.5Q447 122 398.0 103.5Q349 85 290 85Z"/><path transform="translate(952.208 510.000) scale(0.044000 -0.044000)" d="M80 700V0H480V80H165V340H460V420H165V620H480V700Z"/><path transform="translate(983.448 510.000) scale(0.044000 -0.044000)" d="M610 700V179L80 735V0H165V521L695 -35V700Z"/><path transform="translate(1024.588 510.000) scale(0.044000 -0.044000)" d="M10 620H190V0H275V620H455V700H10Z"/><path transform="translate(1052.088 510.000) scale(0.044000 -0.044000)" d="M80 700V0H165V700Z"/><path transform="translate(1069.908 510.000) scale(0.044000 -0.044000)" d="M80 700V0H480V80H165V340H460V420H165V620H480V700Z"/><path transform="translate(1101.148 510.000) scale(0.044000 -0.044000)" d="M80 700V0H440V80H165V700Z"/></g></svg>
   </a>
   <nav class="nav" aria-label="Principale">
     <a href="#services">Services</a>
-    <a href="https://www.royallepageurbain.ca/fr/proprietes/" target="_blank" rel="noopener">Propriétés</a>
+    <a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" target="_blank" rel="noopener">Propriétés</a>
     <a href="#calculatrice">Calculatrice</a>
     <a href="#processus">Processus</a>
     <a href="#faq">Questions</a>
+    <a class="nav__mail" href="mailto:info@vfimmobilier.com">info@vfimmobilier.com</a>
     <a href="#evaluation" class="btn btn--primary"><span class="lg">Obtenir une évaluation</span><span class="sm">Évaluation</span></a>
   </nav>
 </header>
@@ -441,19 +465,20 @@ select.input{background-image:none; padding-right:36px}
 <section class="hero" id="top">
   <div class="wrap hero__grid">
     <div class="hero__copy">
-      <h1 class="hero__name"><span class="given">Vanessa</span><span class="family">Fournier<i>inc.</i></span></h1>
-      <p class="hero__title">Courtier immobilier commercial, industriel et résidentiel</p>
+      <h1 class="hero__name"><span class="given">Vanessa</span><span class="family">Fournier</span><span class="sr">, courtier immobilier commercial et résidentiel sur la Rive-Nord, à Laval, dans les Laurentides et Lanaudière</span></h1>
+      <p class="hero__title">Courtier immobilier commercial et résidentiel</p>
       <hr class="hero__rule">
 
-      <p class="hero__claim rv">Investir. Acheter. Vendre.<br><b>Avec stratégie.</b></p>
+      <p class="hero__claim rv">Acheter. Vendre. Investir.<br><b>Avec stratégie.</b></p>
 
-      <p class="hero__sub lede rv" style="--d:90ms">Courtier immobilier chez Royal LePage Urbain, formée à l'analyse
-      financière par dix ans à la BDC. Je lis les chiffres avant les émotions&nbsp;: immeubles à revenus,
-      locaux industriels, maisons et plex, dans le Grand Montréal et les Laurentides.</p>
+      <p class="hero__sub lede rv" style="--d:90ms">Courtier immobilier chez Royal LePage Urbain, je mets mon expertise
+      en analyse financière et en négociation au service de l’immobilier commercial et résidentiel&nbsp;: immeubles
+      commerciaux, locaux industriels, immeubles à revenus, maisons et plex, dans les Laurentides, à Laval,
+      dans Lanaudière et dans le Grand Montréal.</p>
 
       <div class="btn-row rv" style="--d:180ms">
         <a class="btn btn--primary" href="#evaluation">Obtenir une évaluation</a>
-        <a class="btn btn--ghost" href="https://www.royallepageurbain.ca/fr/proprietes/" target="_blank" rel="noopener">Voir mes propriétés</a>
+        <a class="btn btn--ghost" href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" target="_blank" rel="noopener">Voir mes propriétés</a>
       </div>
 
       <a class="hero__phone rv" style="--d:270ms" href="tel:+15148165798">
@@ -475,9 +500,9 @@ select.input{background-image:none; padding-right:36px}
 <section class="facts wipe rv" aria-label="En bref" data-theme="dark">
   <div class="wrap">
     <dl class="facts__grid">
-      <div class="fact"><dt>Titre</dt><dd>Courtier immobilier résidentiel et commercial</dd></div>
-      <div class="fact"><dt>Agence</dt><dd>Royal LePage Urbain, Montréal (Rosemont, La Petite-Patrie)</dd></div>
-      <div class="fact"><dt>Territoire</dt><dd>Grand Montréal, Rive-Sud, Rive-Nord, Laurentides</dd></div>
+      <div class="fact"><dt>Titre</dt><dd>Courtier immobilier commercial et résidentiel</dd></div>
+      <div class="fact"><dt>Agence</dt><dd>Royal LePage Urbain et Royal LePage Commercial</dd></div>
+      <div class="fact"><dt>Territoire</dt><dd>Rive-Nord, Laval, Laurentides, Lanaudière</dd></div>
       <div class="fact"><dt>Délai de réponse</dt><dd>24&nbsp;heures ouvrables, évaluation sous 48&nbsp;heures</dd></div>
     </dl>
   </div>
@@ -491,20 +516,22 @@ select.input{background-image:none; padding-right:36px}
       <h2 class="rv">Une transaction<br>se prépare<br><b>avant de se signer.</b></h2>
     </div>
     <div class="about__body rv">
-      <p class="lede">Que ce soit un immeuble à revenus, un local industriel ou la maison
-      familiale, la question de départ est la même&nbsp;: qu'est-ce que cette
+      <p class="lede">Que ce soit un immeuble à revenus, un local industriel, un plex ou la maison
+      familiale, la question de départ est la même&nbsp;: qu’est-ce que cette
       propriété doit accomplir pour vous&nbsp;?</p>
-      <p>Avant le courtage, j'ai passé plus de dix ans à la Banque de développement du Canada (BDC),
-      en analyse financière, en négociation et en stratégie d'affaires. C'est cette grille que
-      j'applique à chaque dossier&nbsp;: une lecture des chiffres avant les émotions, une évaluation
-      appuyée sur des comparables réels, et une négociation menée avec un plan plutôt qu'avec de l'espoir.</p>
-      <p>Je travaille les deux marchés, commercial et résidentiel, sous la bannière Royal LePage Urbain.
-      Vous restez décideur. Mon rôle est de vous donner l'information dont vous avez besoin pour
-      décider vite et bien, et de tenir le dossier jusqu'à la signature chez le notaire.</p>
+      <p>Mes dix années à la Banque de développement du Canada (BDC) m’ont appris à regarder un projet
+      dans son ensemble&nbsp;: comprendre les objectifs, évaluer les options, mesurer les enjeux et savoir
+      où se trouve la marge de manœuvre. Au fil des années, j’ai accompagné de nombreux entrepreneurs et
+      particuliers dans des décisions importantes, notamment dans le cadre de projets et de financements
+      immobiliers.</p>
+      <p>C’est cette expérience que j’apporte aujourd’hui au courtage immobilier. Que vous achetiez une
+      maison, vendiez une propriété, investissiez ou cherchiez un espace pour votre entreprise, mon rôle
+      est de vous conseiller, de simplifier les démarches et de garder une vue d’ensemble du dossier,
+      du début jusqu’à la réalisation de votre projet.</p>
 
       <div class="stats">
-        <div class="stat"><div class="stat__n">3</div><div class="stat__l">Secteurs couverts</div></div>
-        <div class="stat"><div class="stat__n">10&nbsp;ans</div><div class="stat__l">D'analyse financière à la BDC</div></div>
+        <div class="stat"><div class="stat__n">10+&nbsp;ans</div><div class="stat__l">D’expérience en analyse financière</div></div>
+        <div class="stat"><div class="stat__n stat__n--sm">3&nbsp;marchés</div><div class="stat__l">Commercial &middot; Industriel &middot; Résidentiel</div></div>
         <div class="stat"><div class="stat__n">24&nbsp;h</div><div class="stat__l">Délai de réponse</div></div>
       </div>
     </div>
@@ -526,7 +553,7 @@ select.input{background-image:none; padding-right:36px}
     <div class="cards">
       <article class="card rv">
         <div class="card__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 12h2M13 12h2M9 16h2M13 16h2"/></svg></div>
-        <h3>Courtage commercial</h3>
+        <h3>Commercial</h3>
         <p>Immeubles à revenus, locaux d'affaires, terrains à développer. On regarde le
         rendement, pas seulement le prix affiché.</p>
         <ul>
@@ -538,21 +565,21 @@ select.input{background-image:none; padding-right:36px}
 
       <article class="card rv" style="--d:90ms">
         <div class="card__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V9l6-3v15M10 21V6l10 3v12M14 12h2M14 16h2"/></svg></div>
-        <h3>Courtage industriel</h3>
+        <h3>Industriel</h3>
         <p>Entrepôts, ateliers, espaces de production. Zonage, hauteur libre, accès
-        camion&nbsp;: les détails qui font ou défont un bail.</p>
+        camion&nbsp;: les détails qui font toute la différence.</p>
         <ul>
           <li>Vérification de zonage</li>
           <li>Entrepôt &amp; production</li>
-          <li>Acquisition d'occupant</li>
+          <li>Propriétaire occupant</li>
         </ul>
       </article>
 
       <article class="card rv" style="--d:180ms">
         <div class="card__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v11h14V10M10 21v-6h4v6"/></svg></div>
-        <h3>Courtage résidentiel</h3>
-        <p>Première propriété, revente, plex. Une mise en marché préparée, des visites
-        filtrées, une promesse d'achat solide.</p>
+        <h3>Résidentiel</h3>
+        <p>Première propriété, achat, vente, plex. Une mise en marché préparée, des visites
+        filtrées, une promesse d’achat solide.</p>
         <ul>
           <li>Mise en marché</li>
           <li>Achat &amp; revente</li>
@@ -563,17 +590,36 @@ select.input{background-image:none; padding-right:36px}
 
     <div class="areas rv" aria-label="Territoires desservis">
       <div>
-        <h3>Montréal</h3>
-        <ul><li>Rosemont, La Petite-Patrie</li><li>Ahuntsic-Cartierville</li><li>Villeray, Plateau, Hochelaga</li><li>Est et centre de l'île</li></ul>
-      </div>
-      <div>
-        <h3>Couronnes</h3>
-        <ul><li>Rive-Sud, Chambly, Longueuil</li><li>Rive-Nord, Laval, Terrebonne</li><li>Saint-Jérôme, Blainville</li><li>Vaudreuil, Ouest-de-l'Île</li></ul>
+        <h3>Rive-Nord &amp; Laval</h3>
+        <ul><li>Blainville</li><li>Rosemère</li><li>Saint-Eustache</li><li>Boisbriand</li><li>Deux-Montagnes</li><li>Oka</li><li>Laval</li></ul>
       </div>
       <div>
         <h3>Laurentides</h3>
-        <ul><li>Saint-Sauveur, Piedmont</li><li>Sainte-Adèle, Val-Morin</li><li>Saint-Donat, Lanaudière</li><li>Terrains et projets de construction</li></ul>
+        <ul><li>Saint-Jérôme</li><li>Mirabel</li><li>Saint-Sauveur</li><li>Piedmont</li><li>Sainte-Adèle</li><li>Sainte-Agathe-des-Monts</li></ul>
       </div>
+      <div>
+        <h3>Lanaudière</h3>
+        <ul><li>Terrebonne</li><li>Mascouche</li><li>Repentigny</li><li>L’Assomption</li></ul>
+      </div>
+    </div>
+
+    <p class="areas__note rv">Votre secteur n’est pas dans la liste&nbsp;? <a href="#contact">Contactez-moi</a> pour discuter de votre projet.</p>
+  </div>
+</section>
+
+<!-- ============ PROPRIÉTÉS (photos) ============ -->
+<section class="shots" id="projets" data-theme="dark" aria-label="Types de propriétés">
+  <div class="wrap">
+    <p class="eyebrow rv">Commercial &middot; Industriel &middot; Résidentiel</p>
+    <h2 class="rv measure">Des projets qui<br><b>créent de la valeur.</b></h2>
+    <div class="shots__grid">
+      <figure class="shot rv">
+        <picture>
+          <source srcset="assets/propriete-residentielle-1100.webp" type="image/webp">
+          <img src="assets/propriete-residentielle-1100.jpg" alt="Propriété résidentielle contemporaine dans les Laurentides, en soirée" width="1092" height="476" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Maisons, plex et immeubles à revenus &middot; Rive-Nord, Laurentides, Lanaudière</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -711,7 +757,7 @@ select.input{background-image:none; padding-right:36px}
               <option>Autre</option>
             </select></div>
           </div>
-          <div class="field"><label for="f-ville">Ville ou secteur</label><input class="input" id="f-ville" name="ville" type="text" autocomplete="address-level2" placeholder="Rosemont, Chambly…"></div>
+          <div class="field"><label for="f-ville">Ville ou secteur</label><input class="input" id="f-ville" name="ville" type="text" autocomplete="address-level2" placeholder="Blainville, Terrebonne…"></div>
         </div>
         <div class="field">
           <label for="f-msg">Adresse et quelques mots sur le projet</label>
@@ -719,7 +765,7 @@ select.input{background-image:none; padding-right:36px}
         </div>
         <label class="check">
           <input type="checkbox" name="consentement" value="oui" required>
-          <span>Je consens à ce que mes renseignements (nom, téléphone, courriel) soient utilisés par Vanessa Fournier inc.
+          <span>Je consens à ce que mes renseignements (nom, téléphone, courriel) soient utilisés par Vanessa Fournier
           pour répondre à ma demande. Ils ne sont ni vendus ni partagés, et je peux retirer mon consentement en tout temps.</span>
         </label>
         <div class="form__foot">
@@ -732,15 +778,15 @@ select.input{background-image:none; padding-right:36px}
 
     <div class="cta__photo">
       <picture>
-        <source srcset="assets/vanessa-noir-1400.webp" type="image/webp" media="(min-width:901px)">
-        <img src="assets/vanessa-noir-900.webp" alt="Vanessa Fournier, courtier immobilier" width="900" height="1163" loading="lazy">
+        <source srcset="assets/immeuble-commercial-1100.webp" type="image/webp">
+        <img src="assets/immeuble-commercial-1100.jpg" alt="Immeuble commercial et industriel à revenus, secteur Rive-Nord de Montréal" width="1092" height="475" loading="lazy" decoding="async">
       </picture>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ (réponses courtes, citables) ============ -->
-<section id="faq">
+<section id="faq" class="wipe wipe--band">
   <div class="wrap">
     <div class="about__grid">
       <div>
@@ -749,36 +795,44 @@ select.input{background-image:none; padding-right:36px}
       </div>
       <div class="faq rv">
         <details>
-          <summary>Quels secteurs de l'immobilier couvrez-vous&nbsp;?</summary>
-          <div class="a"><p>Trois secteurs&nbsp;: commercial (immeubles à revenus, locaux, terrains), industriel (entrepôts, ateliers,
-          production) et résidentiel (maisons, condos, plex). Territoire&nbsp;: Grand Montréal, Rive-Sud, Rive-Nord et Laurentides.</p></div>
+          <summary>Quels secteurs de l’immobilier couvrez-vous&nbsp;?</summary>
+          <div class="a"><p>J’accompagne mes clients dans leurs projets immobiliers commerciaux, industriels et résidentiels&nbsp;:
+          immeubles à revenus, locaux commerciaux, terrains, entrepôts, ateliers, maisons, condos et plex. Mes principaux
+          secteurs d’activité couvrent la Rive-Nord, les Laurentides, Laval, Lanaudière et Montréal.</p></div>
         </details>
         <details>
           <summary>Combien coûte une évaluation de ma propriété&nbsp;?</summary>
-          <div class="a"><p>Rien. L'évaluation est gratuite et sans obligation. Elle est appuyée sur les transactions réelles
-          de votre secteur et livrée sous 48&nbsp;heures.</p></div>
+          <div class="a"><p>L’évaluation de votre propriété est gratuite et sans engagement. Elle repose notamment sur l’analyse
+          du marché, les propriétés comparables et les transactions récentes dans votre secteur afin de vous donner une
+          indication réaliste de sa valeur.</p></div>
         </details>
         <details>
-          <summary>Quelle mise de fonds minimale faut-il au Québec&nbsp;?</summary>
-          <div class="a"><p>5&nbsp;% sur la première tranche de 500&nbsp;000&nbsp;$ et 10&nbsp;% sur la portion entre 500&nbsp;000&nbsp;$ et
-          1,5&nbsp;M$. À partir de 1,5&nbsp;M$, 20&nbsp;% minimum. Sous 20&nbsp;%, une assurance prêt hypothécaire s'ajoute au prêt.
-          La calculatrice ci-dessus en tient compte.</p></div>
+          <summary>Quelle mise de fonds minimale faut-il pour acheter une propriété&nbsp;?</summary>
+          <div class="a"><p>La mise de fonds requise varie selon le type de propriété, son prix, son utilisation et le type de
+          financement. Pour une propriété résidentielle, certaines règles minimales s’appliquent, tandis que le financement
+          d’un immeuble à revenus ou commercial répond à des critères différents. Je peux vous aider à mieux comprendre les
+          paramètres applicables à votre projet et vous orienter vers les bons professionnels.</p></div>
         </details>
         <details>
-          <summary>Qu'est-ce qui distingue un courtier commercial d'un courtier résidentiel&nbsp;?</summary>
-          <div class="a"><p>La lecture du dossier. En commercial, on évalue un rendement&nbsp;: revenus, dépenses, taux de
-          capitalisation, zonage, baux en place. En résidentiel, on évalue une propriété par comparables. Je travaille les deux
-          avec la même méthode d'analyse, héritée de dix ans en financement d'entreprise à la BDC.</p></div>
+          <summary>Quelle est la différence entre l’immobilier commercial et résidentiel&nbsp;?</summary>
+          <div class="a"><p>Chaque type de propriété demande une analyse différente. En immobilier commercial et pour les
+          immeubles à revenus, on s’intéresse notamment aux revenus, aux dépenses, aux baux, au rendement, au zonage et au
+          potentiel de l’immeuble. En résidentiel, l’analyse repose davantage sur le marché, les propriétés comparables,
+          les caractéristiques du bâtiment et les besoins de l’acheteur ou du vendeur.</p>
+          <p>Mon expérience de plus de dix ans à la Banque de développement du Canada (BDC) me permet d’aborder ces
+          différents projets avec une approche structurée, axée sur l’analyse, la négociation et la stratégie.</p></div>
         </details>
         <details>
-          <summary>Comment se passe la première rencontre&nbsp;?</summary>
-          <div class="a"><p>Une conversation de 30 à 45 minutes, au téléphone ou en personne, pour clarifier l'objectif, le budget
-          réel et l'échéancier. Sans engagement, et sans discours de vente. Vous repartez avec une première lecture du marché.</p></div>
+          <summary>Comment se déroule une première rencontre&nbsp;?</summary>
+          <div class="a"><p>La première rencontre permet avant tout de comprendre votre projet, vos objectifs, vos priorités et
+          votre échéancier. Nous discutons de votre situation et des différentes options qui s’offrent à vous afin de
+          déterminer la meilleure façon d’aborder votre projet immobilier. Cette première discussion est sans engagement.</p></div>
         </details>
         <details>
           <summary>À quelle agence êtes-vous rattachée&nbsp;?</summary>
-          <div class="a"><p>Royal LePage Urbain, agence immobilière franchisée indépendante et autonome, 6500, avenue De Lorimier,
-          Montréal (Rosemont, La Petite-Patrie). L'agence a aussi des bureaux à Chambly, à Ahuntsic-Cartierville et à Saint-Donat.</p></div>
+          <div class="a"><p>Je suis courtier immobilier commercial et résidentiel au sein de Royal LePage Urbain et Royal LePage
+          Commercial, agence immobilière. Je bénéficie ainsi des ressources et du réseau de Royal LePage tout en offrant un
+          accompagnement personnalisé à chacun de mes clients.</p></div>
         </details>
       </div>
     </div>
@@ -786,20 +840,21 @@ select.input{background-image:none; padding-right:36px}
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact" style="padding-top:0">
+<section id="contact" style="padding-top:clamp(72px,8vw,120px)">
   <div class="wrap contact__grid">
     <div>
       <p class="eyebrow rv">Contact</p>
-      <h2 class="rv">Un projet,<br>une question,<br><b>un chiffre à valider.</b></h2>
-      <p class="lede rv" style="margin-top:28px">Le plus simple reste le téléphone. Sinon, écrivez-moi&nbsp;:
-      je réponds à tous les courriels sous 24&nbsp;heures ouvrables.</p>
+      <h2 class="rv">Un projet immobilier<br>en tête&nbsp;?<br><b>Commençons par en discuter.</b></h2>
+      <p class="lede rv" style="margin-top:28px">Résidentiel, commercial ou industriel, chaque projet commence par une
+      bonne compréhension de vos objectifs.</p>
+      <div class="btn-row rv"><a class="btn btn--primary" href="#evaluation">Me contacter&nbsp;&rarr;</a></div>
     </div>
     <div class="rv">
       <dl class="dl">
         <div><dt>Téléphone</dt><dd><a href="tel:+15148165798">514 816-5798</a></dd></div>
         <div><dt>Courriel</dt><dd><a href="mailto:info@vfimmobilier.com">info@vfimmobilier.com</a></dd></div>
-        <div><dt>Agence</dt><dd><address>Royal LePage Urbain<br>6500, avenue De Lorimier<br>Montréal (Québec) H2G 2P6</address></dd></div>
-        <div><dt>Propriétés à vendre</dt><dd><a href="https://www.royallepageurbain.ca/fr/proprietes/" target="_blank" rel="noopener">Voir les inscriptions</a></dd></div>
+        <div><dt>Agence</dt><dd><address>Royal LePage St-Donat<br>416, rue Principale<br>Saint-Donat-de-Montcalm (Québec) J0T 2C0</address></dd></div>
+        <div><dt>Propriétés à vendre</dt><dd><a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" target="_blank" rel="noopener">Voir les inscriptions</a></dd></div>
         <div><dt>Profil d'agence</dt><dd><a href="https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402" rel="noopener">royallepageurbain.ca</a></dd></div>
       </dl>
     </div>
@@ -813,18 +868,28 @@ select.input{background-image:none; padding-right:36px}
     <div class="foot__top rv">
       <img class="foot__logo" src="assets/logo-vf-dark.svg" alt="VF Immobilier, commercial, industriel, résidentiel" width="210" height="99">
       <div class="brokerage">
-        <img src="assets/rlp-urbain-agence-blanc.png" alt="Royal LePage Urbain, agence immobilière franchisée indépendante et autonome" width="149" height="86">
+        <img src="assets/rlp-urbain-agence-nb.png" alt="Royal LePage Urbain, agence immobilière franchisée indépendante et autonome" width="149" height="86">
         <div class="brokerage__sep" aria-hidden="true"></div>
-        <p class="brokerage__pending">Logo Royal LePage Commercial, en attente du fichier client</p>
+        <p class="brokerage__pending">Logo Royal LePage Commercial<br>en attente du fichier client</p>
       </div>
     </div>
+    <ul class="social rv" aria-label="Réseaux sociaux">
+      <li><a href="https://www.facebook.com/vfimmobilier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></li>
+      <li><a href="https://www.instagram.com/vfimmobilier/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/vanessa-fournier-a993b4a0" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+    </ul>
     <div class="foot__legal rv">
-      <span>&copy; <span id="yr">2026</span> Vanessa Fournier inc.</span>
-      <span>Courtier immobilier</span>
-      <span>Royal LePage Urbain, agence immobilière, franchisée indépendante et autonome</span>
+      <span>&copy; <span id="yr">2026</span> Vanessa Fournier</span>
+      <span>Courtier immobilier commercial et résidentiel</span>
+      <span>Royal LePage Urbain et Royal LePage Commercial, agence immobilière, franchisée indépendante et autonome</span>
+      <span>416, rue Principale, Saint-Donat-de-Montcalm (Québec) J0T 2C0</span>
       <a href="tel:+15148165798">514 816-5798</a>
       <a href="mailto:info@vfimmobilier.com">info@vfimmobilier.com</a>
     </div>
+    <p class="foot__credit">
+      <span>Stratégie web</span>
+      <a href="https://www.vpourdesign.com" target="_blank" rel="noopener" aria-label="V pour Design, stratégie web"><img src="assets/logo-vpourdesign-clair.png" alt="V pour Design" width="63" height="46" loading="lazy"></a>
+    </p>
   </div>
   <p class="band band--foot"><a href="https://vfimmobilier.com">vfimmobilier.com</a></p>
 </footer>
@@ -834,56 +899,188 @@ select.input{background-image:none; padding-right:36px}
   "@context":"https://schema.org",
   "@graph":[
     {
-      "@type":"RealEstateAgent",
+      "@type":["RealEstateAgent","LocalBusiness"],
       "@id":"https://vfimmobilier.com/#agent",
-      "name":"Vanessa Fournier inc.",
+      "name":"Vanessa Fournier, courtier immobilier",
       "alternateName":"VF Immobilier",
       "url":"https://vfimmobilier.com/",
       "telephone":"+1-514-816-5798",
       "email":"info@vfimmobilier.com",
-      "image":"https://vfimmobilier.com/assets/og-vf-immobilier.jpg",
+      "image":{"@id":"https://vfimmobilier.com/#portrait"},
       "logo":"https://vfimmobilier.com/assets/logo-vf.svg",
-      "slogan":"Investir. Acheter. Vendre. Avec stratégie.",
-      "description":"Vanessa Fournier, courtier immobilier commercial, industriel et résidentiel chez Royal LePage Urbain. Grand Montréal, Rive-Sud, Rive-Nord et Laurentides. Évaluation gratuite sous 48 heures.",
-      "priceRange":"$$",
-      "address":{"@type":"PostalAddress","streetAddress":"6500, avenue De Lorimier","addressLocality":"Montréal","addressRegion":"QC","postalCode":"H2G 2P6","addressCountry":"CA"},
-      "areaServed":[
-        {"@type":"City","name":"Montréal"},{"@type":"City","name":"Laval"},{"@type":"City","name":"Longueuil"},
-        {"@type":"City","name":"Chambly"},{"@type":"City","name":"Saint-Jérôme"},{"@type":"City","name":"Saint-Sauveur"},
-        {"@type":"City","name":"Saint-Donat"},{"@type":"AdministrativeArea","name":"Laurentides"},{"@type":"AdministrativeArea","name":"Grand Montréal"}
-      ],
+      "slogan":"Acheter. Vendre. Investir. Avec stratégie.",
+      "description":"Vanessa Fournier est courtier immobilier commercial et résidentiel chez Royal LePage Urbain et Royal LePage Commercial. Elle accompagne acheteurs, vendeurs et investisseurs sur la Rive-Nord de Montréal, à Laval, dans les Laurentides et dans Lanaudière : immeubles à revenus, locaux commerciaux, entrepôts et espaces industriels, maisons, condos et plex. Évaluation de propriété gratuite, livrée sous 48 heures, et réponse sous 24 heures ouvrables.",
+      "disambiguatingDescription":"Courtier immobilier qui couvre à la fois le commercial, l’industriel et le résidentiel, avec plus de dix ans d’expérience en analyse financière et en financement d’entreprise à la Banque de développement du Canada (BDC).",
+      "knowsAbout":["Immobilier commercial","Immobilier industriel","Immobilier résidentiel","Immeubles à revenus","Plex et multilogements","Locaux commerciaux","Entrepôts et espaces de production","Zonage municipal","Analyse de rendement","Financement immobilier","Négociation immobilière","Évaluation de propriété"],
       "knowsLanguage":["fr-CA","en-CA"],
-      "parentOrganization":{"@type":"RealEstateAgent","name":"Royal LePage Urbain","url":"https://www.royallepageurbain.ca/","telephone":"+1-514-787-1234"},
+      "priceRange":"$$",
+      "currenciesAccepted":"CAD",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"416, rue Principale",
+        "addressLocality":"Saint-Donat-de-Montcalm",
+        "addressRegion":"QC",
+        "postalCode":"J0T 2C0",
+        "addressCountry":"CA"
+      },
+      "contactPoint":[{
+        "@type":"ContactPoint",
+        "contactType":"Prise de rendez-vous et évaluation de propriété",
+        "telephone":"+1-514-816-5798",
+        "email":"info@vfimmobilier.com",
+        "availableLanguage":["fr-CA","en-CA"],
+        "areaServed":{"@id":"https://vfimmobilier.com/#territoire"}
+      }],
+      "areaServed":[
+        {"@id":"https://vfimmobilier.com/#territoire"},
+        {"@type":"AdministrativeArea","name":"Rive-Nord de Montréal"},
+        {"@type":"AdministrativeArea","name":"Laurentides"},
+        {"@type":"AdministrativeArea","name":"Lanaudière"},
+        {"@type":"City","name":"Laval"},{"@type":"City","name":"Blainville"},{"@type":"City","name":"Rosemère"},
+        {"@type":"City","name":"Saint-Eustache"},{"@type":"City","name":"Boisbriand"},{"@type":"City","name":"Deux-Montagnes"},
+        {"@type":"City","name":"Oka"},{"@type":"City","name":"Saint-Jérôme"},{"@type":"City","name":"Mirabel"},
+        {"@type":"City","name":"Saint-Sauveur"},{"@type":"City","name":"Piedmont"},{"@type":"City","name":"Sainte-Adèle"},
+        {"@type":"City","name":"Sainte-Agathe-des-Monts"},{"@type":"City","name":"Terrebonne"},{"@type":"City","name":"Mascouche"},
+        {"@type":"City","name":"Repentigny"},{"@type":"City","name":"L’Assomption"}
+      ],
+      "parentOrganization":{"@id":"https://vfimmobilier.com/#agence"},
       "founder":{"@id":"https://vfimmobilier.com/#vanessa"},
       "employee":{"@id":"https://vfimmobilier.com/#vanessa"},
-      "sameAs":["https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402"],
-      "hasOfferCatalog":{"@type":"OfferCatalog","name":"Services de courtage immobilier","itemListElement":[
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Courtage immobilier commercial","description":"Immeubles à revenus, locaux d'affaires, terrains à développer, analyse de rendement, location commerciale."}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Courtage immobilier industriel","description":"Entrepôts, ateliers, espaces de production, vérification de zonage, acquisition d'occupant."}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Courtage immobilier résidentiel","description":"Achat, revente, plex et multilogements, mise en marché préparée."}},
-        {"@type":"Offer","price":"0","priceCurrency":"CAD","itemOffered":{"@type":"Service","name":"Évaluation gratuite de propriété","description":"Évaluation appuyée sur les transactions réelles du secteur, livrée sous 48 heures, sans obligation."}}
-      ]}
+      "sameAs":[
+        "https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402",
+        "https://www.facebook.com/vfimmobilier.ca",
+        "https://www.instagram.com/vfimmobilier/",
+        "https://www.linkedin.com/in/vanessa-fournier-a993b4a0"
+      ],
+      "makesOffer":[
+        {"@type":"Offer","itemOffered":{"@id":"https://vfimmobilier.com/#service-commercial"}},
+        {"@type":"Offer","itemOffered":{"@id":"https://vfimmobilier.com/#service-industriel"}},
+        {"@type":"Offer","itemOffered":{"@id":"https://vfimmobilier.com/#service-residentiel"}},
+        {"@type":"Offer","price":"0","priceCurrency":"CAD","itemOffered":{"@id":"https://vfimmobilier.com/#service-evaluation"}}
+      ],
+      "hasOfferCatalog":{
+        "@type":"OfferCatalog",
+        "name":"Services de courtage immobilier",
+        "itemListElement":[
+          {"@type":"Offer","itemOffered":{"@id":"https://vfimmobilier.com/#service-commercial"}},
+          {"@type":"Offer","itemOffered":{"@id":"https://vfimmobilier.com/#service-industriel"}},
+          {"@type":"Offer","itemOffered":{"@id":"https://vfimmobilier.com/#service-residentiel"}},
+          {"@type":"Offer","price":"0","priceCurrency":"CAD","itemOffered":{"@id":"https://vfimmobilier.com/#service-evaluation"}}
+        ]
+      }
+    },
+    {
+      "@type":"GeoShape",
+      "@id":"https://vfimmobilier.com/#territoire",
+      "name":"Rive-Nord, Laval, Laurentides et Lanaudière",
+      "description":"Territoire desservi : Blainville, Rosemère, Saint-Eustache, Boisbriand, Deux-Montagnes, Oka, Laval, Saint-Jérôme, Mirabel, Saint-Sauveur, Piedmont, Sainte-Adèle, Sainte-Agathe-des-Monts, Terrebonne, Mascouche, Repentigny et L’Assomption.",
+      "addressCountry":"CA"
+    },
+    {
+      "@type":"RealEstateAgent",
+      "@id":"https://vfimmobilier.com/#agence",
+      "name":"Royal LePage Urbain et Royal LePage Commercial",
+      "description":"Agence immobilière franchisée indépendante et autonome à laquelle Vanessa Fournier est rattachée.",
+      "url":"https://www.royallepageurbain.ca/",
+      "telephone":"+1-514-787-1234",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"416, rue Principale",
+        "addressLocality":"Saint-Donat-de-Montcalm",
+        "addressRegion":"QC",
+        "postalCode":"J0T 2C0",
+        "addressCountry":"CA"
+      }
     },
     {
       "@type":"Person",
       "@id":"https://vfimmobilier.com/#vanessa",
       "name":"Vanessa Fournier",
-      "jobTitle":"Courtier immobilier résidentiel et commercial",
-      "worksFor":{"@type":"Organization","name":"Royal LePage Urbain"},
+      "jobTitle":"Courtier immobilier commercial et résidentiel",
+      "description":"Courtier immobilier commercial et résidentiel. Avant le courtage, plus de dix ans à la Banque de développement du Canada (BDC) en analyse financière, en négociation et en accompagnement de projets et de financements immobiliers.",
+      "worksFor":{"@id":"https://vfimmobilier.com/#agence"},
       "telephone":"+1-514-816-5798",
       "email":"info@vfimmobilier.com",
-      "image":"https://vfimmobilier.com/assets/vanessa-900.jpg",
+      "image":{"@id":"https://vfimmobilier.com/#portrait"},
       "url":"https://vfimmobilier.com/",
-      "sameAs":["https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402"],
       "alumniOf":{"@type":"Organization","name":"Banque de développement du Canada (BDC)"},
-      "knowsAbout":["Immobilier commercial","Immobilier industriel","Immobilier résidentiel","Immeubles à revenus","Analyse financière","Négociation"],
-      "knowsLanguage":["fr-CA","en-CA"]
+      "knowsAbout":["Immobilier commercial","Immobilier industriel","Immobilier résidentiel","Immeubles à revenus","Analyse financière","Financement immobilier","Négociation"],
+      "knowsLanguage":["fr-CA","en-CA"],
+      "areaServed":{"@id":"https://vfimmobilier.com/#territoire"},
+      "sameAs":[
+        "https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402",
+        "https://www.facebook.com/vfimmobilier.ca",
+        "https://www.instagram.com/vfimmobilier/",
+        "https://www.linkedin.com/in/vanessa-fournier-a993b4a0"
+      ]
+    },
+    {
+      "@type":"Service",
+      "@id":"https://vfimmobilier.com/#service-commercial",
+      "name":"Courtage immobilier commercial",
+      "serviceType":"Immobilier commercial",
+      "description":"Immeubles à revenus, locaux d’affaires et terrains à développer. Analyse de rendement, revenus et dépenses, baux en place, zonage et potentiel de l’immeuble, location commerciale.",
+      "provider":{"@id":"https://vfimmobilier.com/#agent"},
+      "areaServed":{"@id":"https://vfimmobilier.com/#territoire"},
+      "availableLanguage":["fr-CA","en-CA"]
+    },
+    {
+      "@type":"Service",
+      "@id":"https://vfimmobilier.com/#service-industriel",
+      "name":"Courtage immobilier industriel",
+      "serviceType":"Immobilier industriel",
+      "description":"Entrepôts, ateliers et espaces de production. Vérification de zonage, hauteur libre, accès camion, acquisition en propriétaire occupant.",
+      "provider":{"@id":"https://vfimmobilier.com/#agent"},
+      "areaServed":{"@id":"https://vfimmobilier.com/#territoire"},
+      "availableLanguage":["fr-CA","en-CA"]
+    },
+    {
+      "@type":"Service",
+      "@id":"https://vfimmobilier.com/#service-residentiel",
+      "name":"Courtage immobilier résidentiel",
+      "serviceType":"Immobilier résidentiel",
+      "description":"Première propriété, achat, vente, plex et multilogements. Mise en marché préparée, visites filtrées, promesse d’achat solide.",
+      "provider":{"@id":"https://vfimmobilier.com/#agent"},
+      "areaServed":{"@id":"https://vfimmobilier.com/#territoire"},
+      "availableLanguage":["fr-CA","en-CA"]
+    },
+    {
+      "@type":"Service",
+      "@id":"https://vfimmobilier.com/#service-evaluation",
+      "name":"Évaluation gratuite de propriété",
+      "serviceType":"Évaluation de propriété",
+      "description":"Évaluation gratuite et sans engagement, appuyée sur l’analyse du marché, les propriétés comparables et les transactions récentes du secteur. Livrée sous 48 heures.",
+      "provider":{"@id":"https://vfimmobilier.com/#agent"},
+      "areaServed":{"@id":"https://vfimmobilier.com/#territoire"},
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD","availability":"https://schema.org/InStock"}
+    },
+    {
+      "@type":"ImageObject",
+      "@id":"https://vfimmobilier.com/#portrait",
+      "url":"https://vfimmobilier.com/assets/vanessa-900.jpg",
+      "contentUrl":"https://vfimmobilier.com/assets/vanessa-900.jpg",
+      "caption":"Vanessa Fournier, courtier immobilier commercial et résidentiel"
+    },
+    {
+      "@type":"ImageObject",
+      "@id":"https://vfimmobilier.com/#photo-commercial",
+      "url":"https://vfimmobilier.com/assets/immeuble-commercial-1100.jpg",
+      "contentUrl":"https://vfimmobilier.com/assets/immeuble-commercial-1100.jpg",
+      "caption":"Immeuble commercial et industriel à revenus, Rive-Nord de Montréal"
+    },
+    {
+      "@type":"ImageObject",
+      "@id":"https://vfimmobilier.com/#photo-residentiel",
+      "url":"https://vfimmobilier.com/assets/propriete-residentielle-1100.jpg",
+      "contentUrl":"https://vfimmobilier.com/assets/propriete-residentielle-1100.jpg",
+      "caption":"Propriété résidentielle contemporaine, Laurentides"
     },
     {
       "@type":"WebSite",
       "@id":"https://vfimmobilier.com/#site",
       "url":"https://vfimmobilier.com/",
       "name":"VF Immobilier",
+      "alternateName":"Vanessa Fournier, courtier immobilier",
       "inLanguage":"fr-CA",
       "publisher":{"@id":"https://vfimmobilier.com/#agent"}
     },
@@ -891,23 +1088,38 @@ select.input{background-image:none; padding-right:36px}
       "@type":"WebPage",
       "@id":"https://vfimmobilier.com/#page",
       "url":"https://vfimmobilier.com/",
-      "name":"Vanessa Fournier, courtier immobilier commercial et résidentiel à Montréal",
+      "name":"Vanessa Fournier, courtier immobilier commercial et résidentiel",
+      "description":"Courtier immobilier commercial, industriel et résidentiel sur la Rive-Nord, à Laval, dans les Laurentides et Lanaudière. Évaluation gratuite sous 48 heures, calculatrice hypothécaire et réponse sous 24 heures ouvrables.",
       "isPartOf":{"@id":"https://vfimmobilier.com/#site"},
       "about":{"@id":"https://vfimmobilier.com/#agent"},
+      "mainEntity":{"@id":"https://vfimmobilier.com/#agent"},
       "inLanguage":"fr-CA",
-      "primaryImageOfPage":"https://vfimmobilier.com/assets/og-vf-immobilier.jpg",
-      "speakable":{"@type":"SpeakableSpecification","cssSelector":[".facts",".faq"]}
+      "dateModified":"2026-09-10",
+      "primaryImageOfPage":{"@id":"https://vfimmobilier.com/#portrait"},
+      "image":[
+        {"@id":"https://vfimmobilier.com/#portrait"},
+        {"@id":"https://vfimmobilier.com/#photo-commercial"},
+        {"@id":"https://vfimmobilier.com/#photo-residentiel"}
+      ],
+      "significantLink":[
+        "https://www.royallepageurbain.ca/fr/courtier-immobilier/vanessa-fournier-141402"
+      ],
+      "speakable":{"@type":"SpeakableSpecification","cssSelector":[".facts",".faq"]},
+      "hasPart":{"@id":"https://vfimmobilier.com/#faq"}
     },
     {
       "@type":"FAQPage",
       "@id":"https://vfimmobilier.com/#faq",
+      "inLanguage":"fr-CA",
+      "isPartOf":{"@id":"https://vfimmobilier.com/#page"},
+      "about":{"@id":"https://vfimmobilier.com/#agent"},
       "mainEntity":[
-        {"@type":"Question","name":"Quels secteurs de l'immobilier couvrez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Trois secteurs : commercial (immeubles à revenus, locaux, terrains), industriel (entrepôts, ateliers, production) et résidentiel (maisons, condos, plex). Territoire : Grand Montréal, Rive-Sud, Rive-Nord et Laurentides."}},
-        {"@type":"Question","name":"Combien coûte une évaluation de ma propriété ?","acceptedAnswer":{"@type":"Answer","text":"Rien. L'évaluation est gratuite et sans obligation. Elle est appuyée sur les transactions réelles de votre secteur et livrée sous 48 heures."}},
-        {"@type":"Question","name":"Quelle mise de fonds minimale faut-il au Québec ?","acceptedAnswer":{"@type":"Answer","text":"5 % sur la première tranche de 500 000 $ et 10 % sur la portion entre 500 000 $ et 1,5 M$. À partir de 1,5 M$, 20 % minimum. Sous 20 %, une assurance prêt hypothécaire s'ajoute au prêt."}},
-        {"@type":"Question","name":"Qu'est-ce qui distingue un courtier commercial d'un courtier résidentiel ?","acceptedAnswer":{"@type":"Answer","text":"La lecture du dossier. En commercial, on évalue un rendement : revenus, dépenses, taux de capitalisation, zonage, baux en place. En résidentiel, on évalue une propriété par comparables. Vanessa Fournier travaille les deux avec la même méthode d'analyse, héritée de dix ans en financement d'entreprise à la BDC."}},
-        {"@type":"Question","name":"Comment se passe la première rencontre ?","acceptedAnswer":{"@type":"Answer","text":"Une conversation de 30 à 45 minutes, au téléphone ou en personne, pour clarifier l'objectif, le budget réel et l'échéancier. Sans engagement, et sans discours de vente."}},
-        {"@type":"Question","name":"À quelle agence êtes-vous rattachée ?","acceptedAnswer":{"@type":"Answer","text":"Royal LePage Urbain, agence immobilière franchisée indépendante et autonome, 6500, avenue De Lorimier, Montréal (Rosemont, La Petite-Patrie). Bureaux aussi à Chambly, Ahuntsic-Cartierville et Saint-Donat."}}
+        {"@type":"Question","name":"Quels secteurs de l’immobilier couvrez-vous ?","acceptedAnswer":{"@type":"Answer","text":"J’accompagne mes clients dans leurs projets immobiliers commerciaux, industriels et résidentiels : immeubles à revenus, locaux commerciaux, terrains, entrepôts, ateliers, maisons, condos et plex. Mes principaux secteurs d’activité couvrent la Rive-Nord, les Laurentides, Laval, Lanaudière et Montréal."}},
+        {"@type":"Question","name":"Combien coûte une évaluation de ma propriété ?","acceptedAnswer":{"@type":"Answer","text":"L’évaluation de votre propriété est gratuite et sans engagement. Elle repose notamment sur l’analyse du marché, les propriétés comparables et les transactions récentes dans votre secteur afin de vous donner une indication réaliste de sa valeur."}},
+        {"@type":"Question","name":"Quelle mise de fonds minimale faut-il pour acheter une propriété ?","acceptedAnswer":{"@type":"Answer","text":"La mise de fonds requise varie selon le type de propriété, son prix, son utilisation et le type de financement. Pour une propriété résidentielle, certaines règles minimales s’appliquent, tandis que le financement d’un immeuble à revenus ou commercial répond à des critères différents. Je peux vous aider à mieux comprendre les paramètres applicables à votre projet et vous orienter vers les bons professionnels."}},
+        {"@type":"Question","name":"Quelle est la différence entre l’immobilier commercial et résidentiel ?","acceptedAnswer":{"@type":"Answer","text":"Chaque type de propriété demande une analyse différente. En immobilier commercial et pour les immeubles à revenus, on s’intéresse notamment aux revenus, aux dépenses, aux baux, au rendement, au zonage et au potentiel de l’immeuble. En résidentiel, l’analyse repose davantage sur le marché, les propriétés comparables, les caractéristiques du bâtiment et les besoins de l’acheteur ou du vendeur. Mon expérience de plus de dix ans à la Banque de développement du Canada (BDC) me permet d’aborder ces différents projets avec une approche structurée, axée sur l’analyse, la négociation et la stratégie."}},
+        {"@type":"Question","name":"Comment se déroule une première rencontre ?","acceptedAnswer":{"@type":"Answer","text":"La première rencontre permet avant tout de comprendre votre projet, vos objectifs, vos priorités et votre échéancier. Nous discutons de votre situation et des différentes options qui s’offrent à vous afin de déterminer la meilleure façon d’aborder votre projet immobilier. Cette première discussion est sans engagement."}},
+        {"@type":"Question","name":"À quelle agence êtes-vous rattachée ?","acceptedAnswer":{"@type":"Answer","text":"Je suis courtier immobilier commercial et résidentiel au sein de Royal LePage Urbain et Royal LePage Commercial, agence immobilière. Je bénéficie ainsi des ressources et du réseau de Royal LePage tout en offrant un accompagnement personnalisé à chacun de mes clients."}}
       ]
     }
   ]
@@ -943,11 +1155,6 @@ select.input{background-image:none; padding-right:36px}
       gsap.set(sec, {'--w':'100%'});
       gsap.to(sec, {'--w':'0%', ease:'none',
         scrollTrigger:{trigger:sec, start:'top bottom', end:'top 62%', scrub:.5}});
-    });
-    /* l'en-tête suit le ton de la section qu'il survole */
-    document.querySelectorAll('section[data-theme="dark"], footer[data-theme="dark"]').forEach(function(sec){
-      ScrollTrigger.create({trigger:sec, start:'top 64px', end:'bottom 64px',
-        onToggle:function(st){ head.toggleAttribute('data-theme', st.isActive); if(st.isActive) head.setAttribute('data-theme','dark'); }});
     });
   });
 
