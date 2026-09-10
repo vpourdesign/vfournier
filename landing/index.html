@@ -1249,9 +1249,12 @@ select.input{background-image:none; padding-right:36px}
     gsap.registerPlugin(ScrollTrigger);
     document.documentElement.classList.add('js-anim');
     document.querySelectorAll('.wipe').forEach(function(sec){
+      /* sur un grand écran, une section déjà visible au chargement est peinte
+         d'emblée : sinon son fond resterait à moitié déployé sans qu'on ait scrollé */
+      if (sec.getBoundingClientRect().top < innerHeight) { gsap.set(sec, {'--w':'0%'}); return; }
       gsap.set(sec, {'--w':'100%'});
       gsap.to(sec, {'--w':'0%', ease:'none',
-        scrollTrigger:{trigger:sec, start:'top bottom', end:'top 62%', scrub:.5}});
+        scrollTrigger:{trigger:sec, start:'clamp(top bottom)', end:'clamp(top 62%)', scrub:.5}});
     });
   });
 
